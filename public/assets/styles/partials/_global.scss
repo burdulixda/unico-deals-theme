@@ -1,0 +1,123 @@
+@mixin flex($direction, $justify, $align) {
+  display : flex;
+  flex-direction : $direction;
+  justify-content : $justify;
+  align-items : $align;
+}
+
+:root {
+  font-size : 10px;
+  --unico-background : #fbfbfb;
+  --unico-red : #f92162;
+  --unico-blue : #105bfb;
+  --unico-tomato : #ff8970;
+  --unico-gray : #9f9f9f;
+  --unico-green : #1cbf2f;
+  --unico-yellow : #f8a714;
+  --unico-dark : #737373;
+  --unico-purple : #8e24f9;
+  --unico-black : #171717;
+
+  --font-xxl : 5.8rem;
+  --font-xl : 3.2rem;
+  --font-lg : 2.8rem;
+  --font-md : 2.2rem;
+  --font-normal : 1.6rem;
+  --font-sm : 1.4rem;
+
+  --radius-circle : 50%;
+  --radius-lg : 3rem;
+  --radius-md : 1.5rem;
+  --radius-sm : 1.2rem;
+
+  body {
+    font-size : 1.6rem;
+  }
+}
+
+@font-face {
+  font-family : helvetica;
+  src : url("../fonts/Helvetica-Neu-Bold.ttf");
+}
+
+* {
+  outline : none !important;
+  list-style : none !important;
+
+  a {
+    color : #000;
+
+    &:hover {
+      text-decoration : none;
+      color : #000;
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background : var(--unico-background);
+}
+
+.unico-container {
+  max-width : 144rem;
+  padding : 0;
+}
+
+.unico-prioritet-low {
+  position : relative;
+  z-index : 0;
+}
+
+.unico-prioritet-normal {
+  position : relative;
+  z-index : 1;
+}
+
+.unico-prioritet-medium {
+  position : relative;
+  z-index : 5;
+}
+
+.unico-prioritet-hight {
+  position : relative;
+  z-index : 10;
+}
+
+section {
+  margin : 0 !important;
+  margin-bottom : 16rem !important;
+
+  &:nth-child(2) {
+    margin-bottom : 18rem;
+  }
+}
+
+.unico-margin__section {
+  margin-bottom : 16rem;
+}
+
+.unico-text__bold {
+  font-weight : bold;
+}
+
+.unico-text__red {
+  color : var(--unico-red);
+}
+
+@media (max-width : 768px) {
+  section {
+    margin-bottom : 5rem !important;
+
+    &:nth-child(2) {
+      margin-bottom : 7rem !important;
+    }
+  }
+
+  .unico-margin__section {
+    margin-bottom : 7rem !important;
+  }
+}
