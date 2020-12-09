@@ -132,8 +132,8 @@
         <h1 class="unico-info__title" data-aos="fade-left" data-aos-duration="1000"><?php the_title(); ?></h1>
         <div class="unico-info__attributes animate__animated animate__fadeInLeft">
           <div class="unico-info__price">
-            <span class="price price__sale"><?php the_field('price') ?></span>
-            <span class="price price__old"><?php the_field('old-price') ?></span>
+            <span class="price price__sale"><?php the_field('price') ?> ₾</span>
+            <span class="price price__old"><?php the_field('old-price') ?> ₾</span>
           </div>
           <div class="unico-info__rating">
 
