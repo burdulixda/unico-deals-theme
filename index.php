@@ -7,5 +7,6 @@
 <?php endif; ?>
 
 <?php get_template_part('related', get_post_format()); ?>
+<?php get_template_part('services', get_post_format()); ?>
 
 <?php get_footer(); ?>
