@@ -280,3 +280,5 @@
     </div>
   </section>
 </main>
+
+<?php get_template_part('related'); ?>

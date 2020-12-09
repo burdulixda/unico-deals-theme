@@ -82,3 +82,6 @@ function strip_shortcode_gallery( $content ) {
 
   return $content;
 }
+
+add_theme_support('post-thumbnails');
+add_image_size('deals-carousel', 220, 220);

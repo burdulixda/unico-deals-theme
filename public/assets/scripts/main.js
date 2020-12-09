@@ -33,7 +33,8 @@ jQuery(function($) {
   $(".unico-slider__products").slick({
     variableWidth : true,
     slidesToScroll: 2,
-    arrows : false
+    arrows : false,
+    infinite: false
   });
   
   $(".slider-modal").slick({
