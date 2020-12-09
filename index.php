@@ -6,4 +6,6 @@
   <p>There no posts to show</p>
 <?php endif; ?>
 
+<?php get_template_part('related', get_post_format()); ?>
+
 <?php get_footer(); ?>
