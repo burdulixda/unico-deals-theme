@@ -14,11 +14,11 @@
   background : #fff;
   border-radius : var(--radius-sm);
   font-size : var(--font-lg);
+  font-family: Avenir-Black;
   font-weight : bolder;
 
   position : relative;
   
-
   display : flex;
   align-items : center;
   justify-content : center;
@@ -26,6 +26,7 @@
   &::before {
     font-size : 1.6rem;
     color : #fff;
+    font-family: Helvetica-Neue-Bold;
 
     bottom : -2.7rem;
     left : 49%;

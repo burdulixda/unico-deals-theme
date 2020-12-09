@@ -112,6 +112,31 @@ section:nth-child(2) {
   }
 }
 
+@font-face {
+  font-family: "Helvetica-Neue-Bold";
+  src: url("../../assets/fonts/helvetica-neue-bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Helvetica-Neue-Light";
+  src: url("../../assets/fonts/helvetica-neue-light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Helvetica-Neue-Roman";
+  src: url("../../assets/fonts/helvetica-neue-roman.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Helvetica-75";
+  src: url("../../assets/fonts/helvetica-neue-bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Avenir-Black";
+  src: url("../../assets/fonts/Avenir-Black.otf") format("opentype");
+}
+
 .countdown {
   margin-bottom: 2rem;
 }
@@ -140,6 +165,7 @@ section:nth-child(2) {
   background: #fff;
   border-radius: var(--radius-sm);
   font-size: var(--font-lg);
+  font-family: Avenir-Black;
   font-weight: bolder;
   position: relative;
   display: -webkit-box;
@@ -156,6 +182,7 @@ section:nth-child(2) {
 .countdown__element::before {
   font-size: 1.6rem;
   color: #fff;
+  font-family: Helvetica-Neue-Bold;
   bottom: -2.7rem;
   left: 49%;
   -webkit-transform: translate(-50%, 0);
@@ -302,11 +329,13 @@ section:nth-child(2) {
   font-size: var(--font-xl);
   color: #fff;
   margin-bottom: 1.2rem;
+  font-family: Helvetica-Neue-Bold;
 }
 
 .unico-sticky .unico-sale__container .sale__title--container .sale__title--subtitle {
   font-size: var(--font-md);
   color: #fff;
+  font-family: Helvetica-Neue-Roman;
 }
 
 .sticky__active {

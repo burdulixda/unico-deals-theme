@@ -1,4 +1,6 @@
-@import 'partials/global';
+@import 'common/global';
+@import 'common/mixins';
+@import 'common/fonts';
 @import 'partials/countdown';
 @import 'partials/header';
 @import 'partials/body';
