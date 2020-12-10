@@ -1322,7 +1322,7 @@ footer {
   background: #fff;
 }
 
-.footer-menu {
+#menu-footer {
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -1340,7 +1340,7 @@ footer {
           align-items: center;
 }
 
-.footer-menu .footer-menu__item {
+#menu-footer .menu-item {
   margin-right: 1.6rem;
 }
 

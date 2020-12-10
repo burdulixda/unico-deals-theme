@@ -85,3 +85,9 @@ function strip_shortcode_gallery( $content ) {
 
 add_theme_support('post-thumbnails');
 add_image_size('deals-carousel', 220, 220);
+
+add_action( 'after_setup_theme', 'register_footer_menu' );
+ 
+function register_footer_menu() {
+  register_nav_menu( 'footer', __( 'Footer Menu', 'theme-text-domain' ) );
+}
