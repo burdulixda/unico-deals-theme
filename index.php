@@ -1,12 +1,5 @@
 <?php get_header(); ?>
 
-<?php if ( have_posts() ) : while ( have_posts() ) :   the_post(); ?>
-  <?php get_template_part('content', get_post_format()); ?>
-<?php endwhile; else: ?>
-  <p>There no posts to show</p>
-<?php endif; ?>
-
-<?php get_template_part('related', get_post_format()); ?>
-<?php get_template_part('services', get_post_format()); ?>
+  <?php get_template_part('404'); ?>
 
 <?php get_footer(); ?>

@@ -1,11 +1,14 @@
 <?php
 
+remove_action('woocommerce_before_single_product', 'woocommerce_output_all_notices', 10);
 add_action('woocommerce_before_single_product', 'unico_deal_single_product_wrapper_start');
+
 function unico_deal_single_product_wrapper_start() {
   echo '<main class="container unico-container mt-5 px-md-0 px-4">';
 }
 
 add_action('woocommerce_after_single_product', 'unico_deal_single_product_wrapper_end');
+
 function unico_deal_single_product_wrapper_end() {
   echo '</main>';
 }
