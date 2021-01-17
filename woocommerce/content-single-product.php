@@ -25,7 +25,7 @@ $product_thumbnail = wp_get_attachment_url($product->get_image_id());
 /**
  * Hook: woocommerce_before_single_product.
  *
- * @hooked woocommerce_output_all_notices - 10
+ * @unhooked woocommerce_output_all_notices - 10
  */
 do_action( 'woocommerce_before_single_product' );
 
