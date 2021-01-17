@@ -1,30 +1,3 @@
-<div class="modal fade" id="imgModal" tabindex="-1" aria-labelledby="imgModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-body">
-        <div class="d-flex justify-content-center align-items-center position-relative">
-          <button class="modal__close" type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-          <div class="slider-modal">
-
-            <?php if (!has_shortcode($post->post_content, 'gallery')) return;
-            $galleries = get_post_galleries_images($post); ?>
-            <?php foreach ($galleries as $gallery) : ?>
-              <?php foreach ($gallery as $key => $value) : ?>
-                <div class="img__container">
-                  <img src="<?php echo $value ?>" alt="slider-img" />
-                </div>
-              <?php endforeach; ?>
-            <?php endforeach; ?>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</div>
 <main class="container unico-container mt-5 px-md-0 px-4">
   <!-- INTRO -->
   <section class="row">

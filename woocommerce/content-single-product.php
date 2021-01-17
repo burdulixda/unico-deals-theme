@@ -34,6 +34,32 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
+<!-- GALLERY MODAL -->
+<aside class="modal fade" id="imgModal" tabindex="-1" aria-labelledby="imgModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="d-flex justify-content-center align-items-center position-relative">
+          <button class="modal__close" type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+          <div class="slider-modal">
+						<div class="img__container">
+							<img src="<?php echo $product_thumbnail ?>" alt="slider-img">
+						</div>
+						<?php foreach ($product_gallery_image_ids as $key => $product_gallery_image_id) : ?>
+							<?php $gallery_image_url = wp_get_attachment_url($product_gallery_image_id); ?>
+							<div class="img__container">
+								<img src="<?php echo $gallery_image_url ?>" alt="slider-img" />
+							</div>
+						<?php endforeach; ?>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</aside>
 
 <section class="row">
 

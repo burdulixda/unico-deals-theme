@@ -176,7 +176,7 @@
   .unico-info__price {
     
     .price {
-      @include flex(row, flex-start, center);
+      @include flex(row-reverse, flex-start, center);
       margin : 4rem 0;
 
       bdi {
@@ -187,6 +187,7 @@
       ins {
         font-size : var(--font-xl);
         color : var(--unico-red);
+        text-decoration : none;
       }
   
       del {
@@ -201,6 +202,10 @@
       @include flex(column, flex-start, flex-end);
 
       .star-rating {
+        margin : 0;
+        height : 2rem;
+        overflow : visible;
+        
         &:before {
           content: 'sssss';
           color: var(--unico-yellow);
@@ -208,6 +213,7 @@
         }
   
         span {
+          color : transparent;
           &:before {
             content: 'SSSSS';
             color: var(--unico-yellow);

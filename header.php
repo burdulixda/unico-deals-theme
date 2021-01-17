@@ -19,8 +19,8 @@
           <h3 class="sale__title--subtitle">დაზოგე 70%</h3>
         </div>
 
-        <div class="d-none" id="unico__date">
-          <?php the_field('expire_date'); ?>
+        <div class="countdown__expire d-none" id="unico__date">
+          12/23/2021 12:00 am
         </div>
 
         <div class="countdown d-flex justify-md-content-end justify-content-center col-md-4 col-12 p-0">

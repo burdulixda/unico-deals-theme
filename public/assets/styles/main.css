@@ -100,18 +100,6 @@ section:nth-child(2) {
   color: var(--unico-red);
 }
 
-@media (max-width: 768px) {
-  section {
-    margin-bottom: 5rem !important;
-  }
-  section:nth-child(2) {
-    margin-bottom: 7rem !important;
-  }
-  .unico-margin__section {
-    margin-bottom: 7rem !important;
-  }
-}
-
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -122,6 +110,154 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+.unico-comment__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  padding: 0 20%;
+}
+
+.unico-comment__container .user__title {
+  font-family: FiraGO-Medium;
+  font-size: 1.5rem;
+}
+
+.unico-comment__container .comment-form-rating .stars {
+  margin-bottom: 0;
+}
+
+.unico-comment__container .comment-form-rating .stars a {
+  color: #FD8970;
+}
+
+.unico-comment__container .unico-input__container {
+  width: 100%;
+  border: .1rem solid #F2F3F5;
+}
+
+.unico-comment__container .unico-input__container .unico-input__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.unico-comment__container .unico-input__container .unico-input__body span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.3rem;
+}
+
+.unico-comment__container .comment-respond {
+  width: 100%;
+}
+
+.unico-comment__container .comment-form-comment textarea {
+  width: 100%;
+  height: 15rem;
+  border: .1rem solid #F2F3F5;
+  border-radius: 2rem;
+  padding: 1.5rem 1rem;
+  font-family: FiraGO-Medium;
+  font-size: 1.3rem;
+  color: #000;
+}
+
+.unico-comment__container .comment-form-attachment {
+  display: none;
+}
+
+.unico-comment__container .upload-image__container {
+  cursor: pointer;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.unico-comment__container .upload-image__container:hover {
+  color: var(--unico-blue);
+}
+
+.unico-comment__container .upload-image__container i {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+}
+
+.unico-comment__container .upload-image__container span {
+  font-family: FiraGO-Medium;
+  font-size: 1.3rem;
+}
+
+#submit {
+  width: 100% !important;
+  background-color: var(--unico-blue) !important;
+  color: #fff !important;
+  border: 1px solid transparent !important;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+#submit:hover {
+  background-color: #fff !important;
+  color: var(--unico-blue) !important;
+  border-color: var(--unico-blue) !important;
+}
+
+@media (max-width: 768px) {
+  section {
+    margin-bottom: 5rem !important;
+  }
+  section:nth-child(2) {
+    margin-bottom: 7rem !important;
+  }
+  .unico-margin__section {
+    margin-bottom: 7rem !important;
+  }
 }
 
 @font-face {
@@ -607,9 +743,9 @@ input[type=number] {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -627,6 +763,7 @@ input[type=number] {
 .unico-info .unico-info__price .price ins {
   font-size: var(--font-xl);
   color: var(--unico-red);
+  text-decoration: none;
 }
 
 .unico-info .unico-info__price .price del {
@@ -649,10 +786,20 @@ input[type=number] {
           align-items: flex-end;
 }
 
+.unico-info .unico-info__rating .woocommerce-product-rating .star-rating {
+  margin: 0;
+  height: 2rem;
+  overflow: visible;
+}
+
 .unico-info .unico-info__rating .woocommerce-product-rating .star-rating:before {
   content: 'sssss';
   color: var(--unico-yellow);
   font-size: 2rem;
+}
+
+.unico-info .unico-info__rating .woocommerce-product-rating .star-rating span {
+  color: transparent;
 }
 
 .unico-info .unico-info__rating .woocommerce-product-rating .star-rating span:before {
@@ -1079,6 +1226,22 @@ input[type=number] {
           align-items: center;
 }
 
+.comment__container .comments__container li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 .comment__item {
   width: 80%;
   margin-bottom: 5rem;
@@ -1128,6 +1291,7 @@ input[type=number] {
 }
 
 .comment__item .comment__body {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1169,6 +1333,10 @@ input[type=number] {
   color: var(--unico-blue);
   font-weight: bold;
   cursor: pointer;
+}
+
+.star-rating {
+  color: var(--unico-yellow);
 }
 
 .unico-gradient__purple {

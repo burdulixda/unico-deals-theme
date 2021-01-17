@@ -46,6 +46,10 @@
 
   .comments__container {
     @include flex(column, flex-start, center);
+
+    li {
+      @include flex(row, flex-start, flex-start);
+    }
   }
 }
 
@@ -87,6 +91,8 @@
   }
 
   .comment__body {
+    width : 100%;
+
     @include flex(column, flex-start, flex-start);
 
     .comment__body--about {
@@ -107,4 +113,9 @@
       cursor : pointer;
     }
   }
+}
+
+.star-rating {
+  color : var(--unico-yellow);
+
 }

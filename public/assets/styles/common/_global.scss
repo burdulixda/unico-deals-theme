@@ -108,6 +108,110 @@ section {
   color : var(--unico-red);
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+// COMMENTS
+.unico-comment__container {
+  @include flex(column , flex-start, flex-start);
+  width : 100%;
+  padding : 0 20%;
+
+  .user__title {
+    font-family : FiraGO-Medium;
+    font-size : 1.5rem;
+  }
+
+  .comment-form-rating {
+    .stars {
+      margin-bottom : 0;
+      a {
+        color : #FD8970;
+      }
+    }
+  }
+
+  .unico-input__container {
+    width : 100%;
+    border: .1rem solid #F2F3F5;
+
+    .unico-input__body {
+      @include flex(row, flex-start, center);
+      span {
+        @include flex(row, flex-start, center);
+        font-size: 1.3rem;
+      }
+    }
+  }
+  
+  .comment-respond {
+    width : 100%;
+  }
+  
+  .comment-form-comment {
+    textarea {
+      width : 100%;
+      height : 15rem;
+      border : .1rem solid #F2F3F5;
+      border-radius : 2rem;
+      padding : 1.5rem 1rem;
+      font-family : FiraGO-Medium;
+      font-size : 1.3rem;
+      color : #000;
+    }
+  }
+
+  .comment-form-attachment {
+    display : none;
+  }
+
+  .upload-image__container {
+    cursor : pointer;
+    transition : .3s ease;
+
+    @include flex(row, flex-start, center);
+
+    &:hover {
+      color : var(--unico-blue);
+    }
+
+    i {
+      font-size : 2.5rem;
+      margin-right : 1rem;
+    }
+
+    span {
+      font-family : FiraGO-Medium;
+      font-size : 1.3rem;
+    }
+  }
+}
+
+// SUBMIT
+#submit {
+  width : 100% !important;
+  background-color : var(--unico-blue) !important;
+  color : #fff !important;
+  border : 1px solid transparent !important;
+  transition : .3s ease;
+
+  &:hover {
+    background-color : #fff !important;
+    color : var(--unico-blue) !important;
+    border-color : var(--unico-blue) !important;
+  }
+}
+
+
 @media (max-width : 768px) {
   section {
     margin-bottom : 5rem !important;
@@ -120,16 +224,4 @@ section {
   .unico-margin__section {
     margin-bottom : 7rem !important;
   }
-}
-
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
 }

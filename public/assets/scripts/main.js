@@ -1,5 +1,3 @@
-console.log("hellow");
-
 AOS.init({
   once: true
 });
@@ -181,4 +179,33 @@ productOrder.forEach(item => {
       }
     });
   })
+});
+
+// COUNTDOWN
+const countdownDays = document.querySelectorAll(".countdown__days");
+const countdownHours =  document.querySelectorAll(".countdown__hours");
+const countdownMinutes = document.querySelectorAll(".countdown__minutes");
+const countdownSeconds = document.querySelectorAll(".countdown__seconds");
+
+const countdownExpires = document.querySelectorAll(".countdown__expire");
+countdownExpires.forEach((item, index) => 
+  const endTime = new Date(item.innerText).getTime();
+
+  setInterval(function () {
+    let now = new Date().getTime();
+    let newDate = endTime - now;
+
+    let days = newDate > 0 ? Math.floor(newDate / (1000 * 60 * 60 * 25)) : 0;
+    let hours = newDate > 0 ? Math.floor((newDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) : 0;
+    let minutes = newDate > 0 ? Math.floor((newDate % (1000 * 60 * 60)) / (1000 * 60)) : 0;
+    let seconds = newDate > 0 ? Math.floor((newDate % (1000 * 60)) / 1000) : 0;
+
+    countdownDays[index].innerText = days;
+    countdownHours[index].innerText = hours;
+    countdownMinutes[index].innerText = minutes;
+    countdownSeconds[index].innerText = seconds;
+
+
+  }, 1000);
+
 });
