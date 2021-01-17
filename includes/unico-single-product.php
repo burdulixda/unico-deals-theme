@@ -16,3 +16,10 @@ add_action('unico_deal_single_product_rating', 'woocommerce_template_single_rati
 add_action('unico_deal_single_product_excerpt', 'woocommerce_template_single_excerpt');
 add_action('unico_deal_single_product_reviews', 'comments_template');
 add_action('unico_deal_related_products', 'woocommerce_output_related_products');
+
+function unico_deals_woocommerce_review_display_gravatar( $comment ) {
+  echo get_avatar( $comment, apply_filters( 'woocommerce_review_gravatar_size', '100' ), '' );
+}
+
+remove_action('woocommerce_review_before', 'woocommerce_review_display_gravatar', 10);
+add_action('woocommerce_review_before', 'unico_deals_woocommerce_review_display_gravatar', 10);
