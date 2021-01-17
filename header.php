@@ -25,13 +25,13 @@
 
         <div class="countdown d-flex justify-md-content-end justify-content-center col-md-4 col-12 p-0">
           <div class="countdown__elements">
-            <div class="countdown__element countdown__days">43</div>
+            <div class="countdown__element countdown__days"></div>
             <div class="countdown__dots">:</div>
-            <div class="countdown__element countdown__hours">32</div>
+            <div class="countdown__element countdown__hours"></div>
             <div class="countdown__dots">:</div>
-            <div class="countdown__element countdown__minutes">12</div>
+            <div class="countdown__element countdown__minutes"></div>
             <div class="countdown__dots">:</div>
-            <div class="countdown__element countdown__seconds">32</div>
+            <div class="countdown__element countdown__seconds"></div>
           </div>
         </div>
 

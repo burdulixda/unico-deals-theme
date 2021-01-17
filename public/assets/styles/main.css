@@ -590,7 +590,7 @@ section:nth-child(2) {
   width: 90%;
 }
 
-.unico-info .unico-info__price {
+.unico-info .unico-info__price .price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -607,21 +607,21 @@ section:nth-child(2) {
   margin: 4rem 0;
 }
 
-.unico-info .unico-info__price .price {
+.unico-info .unico-info__price .price bdi {
   font-weight: bold;
   margin-right: .6rem;
 }
 
-.unico-info .unico-info__price .price__sale {
+.unico-info .unico-info__price .price ins {
   font-size: var(--font-xl);
   color: var(--unico-red);
 }
 
-.unico-info .unico-info__price .price__old {
+.unico-info .unico-info__price .price del {
   text-decoration: line-through;
 }
 
-.unico-info .unico-info__rating {
+.unico-info .unico-info__rating .woocommerce-product-rating {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -637,12 +637,19 @@ section:nth-child(2) {
           align-items: flex-end;
 }
 
-.unico-info .unico-info__rating .stars i {
-  font-size: 2rem;
+.unico-info .unico-info__rating .woocommerce-product-rating .star-rating:before {
+  content: 'sssss';
   color: var(--unico-yellow);
+  font-size: 2rem;
 }
 
-.unico-info .unico-info__rating .rate {
+.unico-info .unico-info__rating .woocommerce-product-rating .star-rating span:before {
+  content: 'SSSSS';
+  color: var(--unico-yellow);
+  font-size: 2rem;
+}
+
+.unico-info .unico-info__rating .woocommerce-product-rating .woocommerce-review-link {
   margin: 0 0 0 1rem;
   color: var(--unico-gray);
 }
@@ -980,7 +987,7 @@ section:nth-child(2) {
   border-bottom: none;
 }
 
-.attributes__container .attribute__item .attribute__key, .attributes__container .attribute__item .attribute__value {
+.attributes__container .attribute__item .attribute__key, .attributes__container .attribute__item .attribute__value > p {
   color: var(--unico-black);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1477,7 +1484,7 @@ footer {
         -ms-flex-pack: center !important;
             justify-content: center !important;
   }
-  .footer-menu {
+  #menu-footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

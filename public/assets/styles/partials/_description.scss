@@ -145,7 +145,7 @@
 
     @include flex(row, space-between, center);
 
-    .attribute__key, .attribute__value {
+    .attribute__key, .attribute__value>p {
       color : var(--unico-black);
       overflow : hidden;
       text-overflow : ellipsis;

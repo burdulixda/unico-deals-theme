@@ -174,39 +174,54 @@
   }
 
   .unico-info__price {
-    @include flex(row, flex-start, center);
-    margin : 4rem 0;
-
+    
     .price {
-      font-weight : bold;
-      margin-right : .6rem;
-    }
+      @include flex(row, flex-start, center);
+      margin : 4rem 0;
 
-    .price__sale {
-      font-size : var(--font-xl);
-      color : var(--unico-red);
-    }
-
-    .price__old {
-      text-decoration : line-through;
-    }
-  }
-
-  .unico-info__rating {
-    @include flex(column, flex-start, flex-end);
-
-    .stars {
-      i {
-        font-size : 2rem;
-        color : var(--unico-yellow);
+      bdi {
+        font-weight : bold;
+        margin-right : .6rem;
+      }
+  
+      ins {
+        font-size : var(--font-xl);
+        color : var(--unico-red);
+      }
+  
+      del {
+        text-decoration : line-through;
       }
     }
 
-    .rate {
-      margin : 0 0 0 1rem;
-      color : var(--unico-gray);
+  }
 
+  .unico-info__rating {
+    .woocommerce-product-rating {
+      @include flex(column, flex-start, flex-end);
+
+      .star-rating {
+        &:before {
+          content: 'sssss';
+          color: var(--unico-yellow);
+          font-size: 2rem;
+        }
+  
+        span {
+          &:before {
+            content: 'SSSSS';
+            color: var(--unico-yellow);
+            font-size: 2rem;
+          }
+        }
+      }
+  
+      .woocommerce-review-link {
+        margin : 0 0 0 1rem;
+        color : var(--unico-gray);
+      }
     }
+
   }
 }
 
