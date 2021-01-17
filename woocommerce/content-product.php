@@ -34,9 +34,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 		 */
 		do_action( 'woocommerce_before_shop_loop_item' );
 	?>
-	<div class="img__container">
-		<?php do_action('unico_landing_content_thumbnail'); ?>
-	</div>
+	<?php do_action('unico_landing_content_thumbnail'); ?>
 	<a href="<?php the_permalink() ?>" class="product-article__title"><?php echo the_title(); ?></a>
 	<?php
 		/**
