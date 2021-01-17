@@ -91,13 +91,15 @@ if ( post_password_required() ) {
 		<div class="unico-form__container d-md-none d-block animate__animated animate__bounce">
 			<h2 class="unico-form__title">შეუკვეთე ახლავე</h2>
 			<form class="unico-form" method="POST" action="/">
-				<input type="text" name="unico-name" class="unico-input" placeholder="სახელი, გვარი" required />
-				<input type="text" name="unico-password" class="unico-input" placeholder="ნომერი" required />
+				<input type="text" name="fullname" class="unico-input" placeholder="სახელი, გვარი" required />
+				<input type="text" name="phone" class="unico-input" placeholder="ნომერი" required />
+				<input type="hidden" name="sku" value="<?php echo $product->get_sku() ?>" />
+				<input type="hidden" name="product_id" value="<?php echo $product->get_id() ?>" />
 
 				<div class="unico-form__body">
 					<div class="unico-calculator">
 						<span class="calculate" data-count="-1" onclick="calculate(this)"><i class="uil uil-minus-square"></i></span>
-						<span class="calculate__result">1</span>
+						<input type="number" min="1" max="<?php echo $product->get_stock_quantity() ?>" value="1" name="quick_order_quantity" class="calculate__result" />
 						<span class="calculate" data-count="1" onclick="calculate(this)"><i class="uil uil-plus-square"></i></span>
 					</div>
 					<button type="submit" class="unico-form__button"><i class="uil uil-shopping-cart"></i>შეძენა</button>
@@ -149,13 +151,15 @@ if ( post_password_required() ) {
 		<div class="unico-form__container d-md-block d-none animate__animated animate__fadeInRight">
 			<h2 class="unico-form__title">შეუკვეთე ახლავე</h2>
 			<form class="unico-form" method="POST" action="/">
-				<input type="text" name="unico-name" class="unico-input" placeholder="სახელი, გვარი" required />
-				<input type="text" name="unico-password" class="unico-input" placeholder="ნომერი" required />
+				<input type="text" name="fullname" class="unico-input" placeholder="სახელი, გვარი" required />
+				<input type="text" name="phone" class="unico-input" placeholder="ნომერი" required />
+				<input type="hidden" name="sku" value="<?php echo $product->get_sku() ?>" />
+				<input type="hidden" name="product_id" value="<?php echo $product->get_id() ?>" />
 
 				<div class="unico-form__body">
 					<div class="unico-calculator">
 						<span class="calculate" data-count="-1" onclick="calculate(this)"><i class="uil uil-minus-square"></i></span>
-						<span class="calculate__result">1</span>
+						<input type="number" min="1" max="<?php echo $product->get_stock_quantity() ?>" value="1" name="quick_order_quantity" class="calculate__result" />
 						<span class="calculate" data-count="1" onclick="calculate(this)"><i class="uil uil-plus-square"></i></span>
 					</div>
 					<button type="submit" class="unico-form__button"><i class="uil uil-shopping-cart"></i>შეძენა</button>

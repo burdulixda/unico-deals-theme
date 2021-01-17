@@ -66,7 +66,10 @@ if ( !function_exists( 'deals_vital' ) ) {
     $rand = rand( 1, 99999999999 );
     wp_enqueue_style( 'unico_deals_stylesheet', get_template_directory_uri() . '/public/assets/styles/main.css', '', $rand, 'all' );
 
-    wp_enqueue_script( 'deals_script', get_template_directory_uri() . '/public/assets/scripts/main.js', array('jquery'), '', true );
+    wp_register_script( 'deals_script', get_template_directory_uri() . '/public/assets/scripts/main.js', array('jquery'), '', true );
+    wp_enqueue_script( 'deals_script' );
+    $translation_array = array( 'wpAdminUrl' => admin_url(), 'unicoUrl' => get_home_url() );
+    wp_localize_script( 'deals_script', 'unico_global', $translation_array );
   }
 
   add_action( 'wp_enqueue_scripts', 'deals_vital' );
@@ -119,4 +122,38 @@ add_action( 'after_setup_theme', 'register_footer_menu' );
  
 function register_footer_menu() {
   register_nav_menu( 'footer', __( 'Footer Menu', 'theme-text-domain' ) );
+}
+
+// CREATE ORDER
+add_action('wp_ajax_nopriv_create_custom_order', 'create_custom_order');
+add_action('wp_ajax_create_custom_order', 'create_custom_order');
+
+function create_custom_order() {
+  if($_SERVER["REQUEST_METHOD"] == "POST") {
+    $address = array(
+      'first_name' => $_POST['fullname'],
+      'last_name' => $_POST['fullname'],
+      'phone' => $_POST['phone'],
+    );
+    
+    $order = wc_create_order();
+
+    $order->set_address($address, 'billing');
+
+    // LOOP CART PRODUCTS FOR CRYSTAL & CREDO
+    foreach ( WC()->cart->get_cart() as $key => $cart_item ) {
+      /** @var WC_Product $product */
+      $product = $cart_item['data'];
+      $product_quantity = $cart_item['quantity'];
+    
+      $order->add_product($product, $product_quantity);
+    }
+
+    $order->calculate_totals();
+
+    $order->update_status('on-hold', 'განვადება', true);
+    $order->save();
+
+    WC()->cart->empty_cart();
+  }
 }

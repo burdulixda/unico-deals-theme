@@ -307,8 +307,9 @@
 
   .calculate__result {
     max-widtH: 20%;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    background: transparent;
+    border: none;
+    text-align: center;
   }
 }
 
