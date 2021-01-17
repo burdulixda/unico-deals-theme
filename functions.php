@@ -33,7 +33,10 @@ if ( !function_exists( 'bootstrap' ) ) {
 
   function bootstrap() {
     wp_enqueue_style( 'bootstrap_css', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css' );
+    wp_enqueue_style( 'animate_css', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css' );
+    wp_enqueue_style( 'toastr_css', 'https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css' );
     wp_enqueue_script( 'bootstrap_js','https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js', array( 'jquery' ),'',true );
+    wp_enqueue_script( 'toastr_js','https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js', array( 'jquery' ),'',true );
     // wp_enqueue_script( 'Popper.js','https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js', array( 'jquery' ),'',true );
     // wp_enqueue_script( 'bootstrapJs','https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js', array( 'jquery' ),'',true );
   }
@@ -151,7 +154,7 @@ function create_custom_order() {
 
     $order->calculate_totals();
 
-    $order->update_status('on-hold', 'განვადება', true);
+    $order->update_status('pending-payment', 'მუშავდება', true);
     $order->save();
 
     WC()->cart->empty_cart();

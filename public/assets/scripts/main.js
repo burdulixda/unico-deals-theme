@@ -88,31 +88,49 @@ class Order {
   }
 
   validateData = async (name, phone) => {
-    if(name.length <= 0 || name.length <= 2) {
-      this.popup("length < 0");
+    if(name.length <= 2) {
+      this.popup("სახელისა და გვარის ველი არასწორადაა შევსებული!");
       return false;
     } else if (name.length > 30) {
-      this.popup("to mutch simbols in name");
+      this.popup("ძალიან ბევრი სიმბოლოა სახელისა და გვარის ველში");
       return false;
     }
 
     if(isNaN(phone)) {
-      this.popup("not a number");
+      this.popup("ნომერის ველში უნდა იყოს მხოლოდ ციფრები");
       return false;
     } else if (phone.length < 6) {
-      this.popup("to shor phone number")
+      this.popup("ძალიან მოკლე ნომერია")
       return false;
     } else if (phone.length > 13) {
-      this.popup("to long phone number");
+      this.popup("ძალიან გრძელი ნომერია");
       return false;
     }
 
     return true;
   }
 
-  popup = (info = "no info") => {
-    console.log(info);
-    alert(info);
+  popup = (value, duplicates = false) => {
+    toastr.options = {
+      "closeButton": true,
+      "debug": false,
+      "newestOnTop": true,
+      "progressBar": true,
+      "positionClass": "toast-top-right",
+      "preventDuplicates": duplicates,
+      "onclick": null,
+      "showDuration": "300",
+      "hideDuration": "1000",
+      "timeOut": "5000",
+      "extendedTimeOut": "1000",
+      "showEasing": "swing",
+      "hideEasing": "linear",
+      "showMethod": "fadeIn",
+      "hideMethod": "fadeOut"
+    }
+    
+    toastr["error"](value);
+    
   }
 
   registerOrder = async ({name = "no name", phone = "no phone"}) => {
@@ -169,7 +187,13 @@ productOrder.forEach(item => {
           order.registerOrder({name : fullName, phone : phoneNumber})
           .then(res => {
             order.loader({rootElement : e.target, state : false});
-            e.target.innerHTML = "<h2>Order is Done</h2>";
+            e.target.innerHTML = `
+              <div class="unico-description__container animate__animated animate__fadeInRight mt-5" style="background-color : var(--unico-red)">
+                <h2 class="w-100 text-center text-light">თქვენი შეკვეთა გადაცემულია !</h2>
+                <span class="w-100 text-center text-light my-3">ჩვენი ოპერატორი მალე დაგიკავშირდებათ შემდეგ ნომერზე</span>
+                <h3 class="w-100 text-center text-light">58843213</h3>
+              </div>
+            `;
           })
           .catch(err => console.log(err));
         })
@@ -188,7 +212,8 @@ const countdownMinutes = document.querySelectorAll(".countdown__minutes");
 const countdownSeconds = document.querySelectorAll(".countdown__seconds");
 
 const countdownExpires = document.querySelectorAll(".countdown__expire");
-countdownExpires.forEach((item, index) => 
+
+countdownExpires.forEach((item, index) => {
   const endTime = new Date(item.innerText).getTime();
 
   setInterval(function () {
