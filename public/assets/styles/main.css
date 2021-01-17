@@ -1224,10 +1224,6 @@ section:nth-child(2) {
           align-items: center;
 }
 
-.unico-slider__products .product-article .img__container img {
-  height: 90%;
-}
-
 .unico-slider__products .product-article .product-article__title {
   width: 20rem;
   height: 5.5rem;

@@ -42,10 +42,6 @@
       margin-bottom : 1.6rem;
 
       @include flex(row, center, center);
-
-      img {
-        height : 90%;
-      }
     }
 
     .product-article__title {
