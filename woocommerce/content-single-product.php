@@ -69,7 +69,7 @@ if ( post_password_required() ) {
 			<span class="absolute__circle"></span>
 			<h2 class="unico-special__title">კვირის სპეციალური შემოთავაზება</h2>
 			<div class="unico-special__circle">
-				<span class="circle__count"><?php echo $product->get_stock_quantity(); ?></span>
+				<span class="circle__count"></span>
 				<span class="circle__count--word">ცალი</span>
 			</div>
 			<span class="unico-special__title--subtitle">მარაგში დარჩენილია მხოლოდ</span>

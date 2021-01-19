@@ -22,7 +22,7 @@
         <?php include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
         if ( is_plugin_active( 'advanced-custom-fields/acf.php' ) ) { ?>
           <div class="countdown__expire d-none" id="unico__date">
-            <?php the_field('expire_date'); ?>
+            <?php the_field('deal_expire_date'); ?>
           </div>
         <?php } ?>
 
@@ -48,7 +48,7 @@
       <h2 class="unico-special__mobile--title">კვირის სპეციალური შემოთავაზება</h2>
       <span class="unico-special__mobile--subtitle">მარაგში დარჩნილია მხოლოდ</span>
       <div class="unico-special__mobile--circle">
-        <span class="circle__count">11</span>
+        <span id="depended_circle_count" class="circle__count"></span>
       </div>
     </div>
     <div class="container unico-container unico-navbar">

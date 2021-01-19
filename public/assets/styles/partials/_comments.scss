@@ -117,5 +117,50 @@
 
 .star-rating {
   color : var(--unico-yellow);
+}
 
+.comment-form {
+  @include flex(column, flex-start, flex-start);
+  width : 100%;
+
+  .comment-notes {
+    display : none;
+  }
+
+  .unico-comment__input {
+    width : 100%;
+    display : block; 
+    border : 1px solid  #F2F3F5;
+    border-radius : 2rem;
+    padding : 1rem 2rem;
+  }
+
+  .unico-comment__label {
+    font-family : FiraGO-Medium;
+  }
+
+  .comment-form-comment {
+    order : 2;
+    width : 100%;
+  }
+
+  .comment-form-author {
+    order : 0;
+    width : 100%;
+  }
+
+  .comment-form-email {
+    order : 1;
+    width : 100%;
+  }
+
+  .comment-form-rating {
+    order : 3;
+    width : 100%;
+  }
+
+  .form-submit {
+    order : 4;
+    width : 100%;
+  }
 }

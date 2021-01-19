@@ -120,6 +120,134 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+//UNICO INPUT
+
+.unico-input__container {
+  @include flex(row, space-between, center);
+  width: 42.5rem;
+  height: 5.5rem;
+  overflow: hidden;
+
+  position: relative;
+
+  border: .1 solid #dadada;
+  border-radius: 5rem;
+  margin-bottom: 2rem;
+}
+
+.unico-input__head {
+  border-right: 1px solid #dadada;
+  width: 6rem;
+  height: 60%;
+
+  @include flex(row, center, center);
+
+  i {
+    color: #dadada;
+    font-size: 2.24rem;
+    margin-left: .5rem;
+  }
+}
+
+.cart-id__type {
+  @include flex(row, flex-start, center);
+
+  width: 100% !important;
+  padding: 1.5rem 3rem;
+  label {
+    font-size: 1.6rem;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  input {
+    width: 1.7rem;
+    height: 1.7rem;
+    margin-right: 2rem;
+  }
+}
+
+.cart-container__active {
+  background: red;
+}
+
+.unico-input__body {
+  position: relative;
+  width: 76%;
+  height: 100%;
+
+  .unico-input {
+    color: #223549;
+    font-family: FiraGO-Medium;
+
+    &:focus {
+      + .unico-label {
+        font-size: 1rem;
+        top: .4rem;
+        transform: translate(0, 0);
+      }
+    }
+  }
+
+  .unico-label {
+    font-size: 1.4rem;
+    font-family: FiraGO-Medium;
+    color: #22354999;
+    transition: 0.3s ease;
+  }
+  // INPUT-TEXT
+  .unico-label__text {
+    position: absolute;
+    top: 50%;
+    left: .4rem;
+    transform: translate(0, -50%);
+  }
+
+  .unico-input__text {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+  }
+  // INPUT-RADIO
+  .unico-label__radio {
+    font-family: FiraGO-Medium;
+    font-size: 1.6rem;
+    color: #223549;
+    margin: 0;
+  }
+
+  .unico-input__radio {
+    width: 1.7rem;
+    height: 1.7rem;
+    margin: 0 3.5rem;
+  }
+}
+
+//BODY ACTIVE
+.input-body__active {
+  background: var(--unico-blue);
+
+  .unico-label__radio {
+    color: #fff;
+  }
+}
+
+.unico-input__footer {
+  width: 6rem;
+  height: 100%;
+
+  @include flex(row, center, center);
+
+  .input__link {
+    i {
+      font-size: 2.24rem;
+      color: var(--unico-blue);
+    }
+  }
+}
+
+
 // COMMENTS
 .unico-comment__container {
   @include flex(column , flex-start, flex-start);
@@ -208,6 +336,30 @@ input[type=number] {
     background-color : #fff !important;
     color : var(--unico-blue) !important;
     border-color : var(--unico-blue) !important;
+  }
+}
+
+.unico-button {
+  width: 100%;
+  height: 5.5rem;
+  font-family: FiraGO-Medium;
+  border: .1rem solid transparent;
+  border-radius: 5rem;
+  color: #fff;
+  transition: 0.3s ease;
+  cursor: pointer;
+
+  @include flex(row, center, center);
+}
+
+.unico-button__blue {
+  background: #116be5;
+  color: #fff;
+
+  &:hover {
+    color: #116be5;
+    border-color: #116be5;
+    background: #fff;
   }
 }
 

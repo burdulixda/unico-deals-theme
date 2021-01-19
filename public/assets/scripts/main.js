@@ -234,3 +234,85 @@ countdownExpires.forEach((item, index) => {
   }, 1000);
 
 });
+
+function uploadImage() {
+  const uploadButton = document.querySelector("#attachment");
+  uploadButton.click();
+}
+
+const dependedCicleContainer = document.querySelector("#depended_circle_count");
+const undependedCicleContainer = document.querySelector(".circle__count");
+
+if(dependedCicleContainer) {
+  dependedCicleContainer.innerText = undependedCicleContainer.innerText;
+}
+
+// ATTRIBUTE ACCORDION
+const attributeItems = document.querySelectorAll(".attribute__item");
+
+if(attributeItems.length > 0) {
+  for(let i = 0; i < attributeItems.length; i++) {
+    attributeItems[i].classList.add("d-flex");
+    if(i > 5) {
+      attributeItems[i].classList.remove("d-flex");
+      attributeItems[i].classList.add("d-none");
+    }
+  }
+}
+
+const attributeToggle = document.querySelector(".attributes-toggle");
+
+attributeToggle.onclick = (e) => {
+  attributeItems.forEach(item => {
+    item.classList.add("d-flex");
+  });
+
+  e.target.remove();
+}
+
+
+class Butaforia {
+
+  setStorage = (num) => {
+    localStorage.setItem("itemsCount", num);
+  }
+  
+  getStorage = () => {
+    const itemsCount = localStorage.getItem("itemsCount");
+    return itemsCount;
+  }
+
+  render = (el) => {
+    let currentStorage = this.getStorage();
+
+    if(currentStorage < 4 || isNaN(currentStorage) || currentStorage === undefined) {
+      this.setStorage(14);
+    }
+
+    let currentCount = this.getStorage();
+    this.draw(el, currentCount);
+
+    const interval = setInterval(() => {
+      if(currentCount <= 3) {
+        clearInterval(interval);
+        localStorage.clear();
+      }
+      this.draw(el, currentCount);
+      this.setStorage(currentCount--);
+    }, (~~(Math.random() * 20) + 10) * 500);
+
+  }
+
+  draw = (el, value) => {
+    if(el.length > 0) {
+      for(let i = 0; i < el.length; i++) {
+        el[i].innerText = value;
+      }
+    }
+  }
+}
+
+const butaforia = new Butaforia();
+const circleCount = document.querySelectorAll(".circle__count");
+
+butaforia.render(circleCount);
