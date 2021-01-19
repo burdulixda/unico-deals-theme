@@ -130,6 +130,8 @@ if ( post_password_required() ) {
 					</div>
 					<button type="submit" class="unico-form__button"><i class="uil uil-shopping-cart"></i>შეძენა</button>
 				</div>
+				
+				<a href="tel:555443322" class="unico-button__red mt-4"><i class="uil uil-phone mr-4"></i>555-99-44-33</a>
 
 				<div class="unico-form__body mt-5">
 					<div class="">
@@ -191,7 +193,9 @@ if ( post_password_required() ) {
 					<button type="submit" class="unico-form__button"><i class="uil uil-shopping-cart"></i>შეძენა</button>
 				</div>
 
+				<a href="tel:555443322" class="unico-button__red mt-4"><i class="uil uil-phone mr-4"></i>555-99-44-33</a>
 				<div class="unico-form__body mt-5">
+
 					<div class="">
 						<div class="unico-proposition__container">
 							<i class="uil uil-check"></i>
