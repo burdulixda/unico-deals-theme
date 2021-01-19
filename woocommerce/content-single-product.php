@@ -226,7 +226,7 @@ if ( post_password_required() ) {
 
 </section>
 
-<section class="row">
+<div class="row" style="margin-bottom  : 20rem">
 
 	<div class="col-md-6 col-12 p-0" data-aos="flip-right" data-aos-duration="1000">
 		<div class="unico-description__container">
@@ -270,7 +270,7 @@ if ( post_password_required() ) {
 		</div>
 	</div>
 
-</section>
+</div>
 
 <section class="row d-flex justify-content-center">
 	<?php do_action('unico_deal_single_product_reviews'); ?>
