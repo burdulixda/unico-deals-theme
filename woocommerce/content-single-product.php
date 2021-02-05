@@ -128,31 +128,27 @@ if ( post_password_required() ) {
 						<input type="number" min="1" max="<?php echo $product->get_stock_quantity() ?>" value="1" name="quick_order_quantity" class="calculate__result" />
 						<span class="calculate" data-count="1" onclick="calculate(this)"><i class="uil uil-plus-square"></i></span>
 					</div>
-					<button type="submit" class="unico-form__button"><i class="uil uil-shopping-cart"></i>შეძენა</button>
+					<a href="tel:577156611" class="unico-form__button d-flex justify-content-center align-items-center"><i class="uil uil-phone mr-4"></i>577 15 66 11</a>
 				</div>
 				
-				<a href="tel:555443322" class="unico-button__red mt-4"><i class="uil uil-phone mr-4"></i>555-99-44-33</a>
+				<button type="submit" class="unico-button__red mt-4"><i class="uil uil-shopping-cart mr-3"></i>შეძენა</button>
 
-				<div class="unico-form__body mt-5">
-					<div class="">
-						<div class="unico-proposition__container">
-							<i class="uil uil-check"></i>
-							<span class="unico-proposition__title">2 წლიანი გარანტია</span>
-						</div>
-						<div class="unico-proposition__container">
-							<i class="uil uil-check"></i>
-							<span class="unico-proposition__title">2 წლიანი გარანტია</span>
-						</div>
+				<div class="unico-form__propositions mt-5">
+					<div class="unico-proposition__container">
+						<i class="uil uil-shield"></i>
+						<span class="unico-proposition__title">გარანტია თითოეულ პროდუქტზე</span>
 					</div>
-					<div class="">
-						<div class="unico-proposition__container">
-							<i class="uil uil-check"></i>
-							<span class="unico-proposition__title">2 წლიანი გარანტია</span>
-						</div>
-						<div class="unico-proposition__container">
-							<i class="uil uil-check"></i>
-							<span class="unico-proposition__title">2 წლიანი გარანტია</span>
-						</div>
+					<div class="unico-proposition__container">
+						<i class="uil uil-truck"></i>
+						<span class="unico-proposition__title">მიწოდების სერვისი მთელი საქართველოს მასშტაბით</span>
+					</div>
+					<div class="unico-proposition__container">
+						<i class="uil uil-repeat"></i>
+						<span class="unico-proposition__title">ნივთის დაბრუნების პოლიტიკა</span>
+					</div>
+					<div class="unico-proposition__container">
+						<i class="uil uil-money-withdraw"></i>
+						<span class="unico-proposition__title">თანხის გადახდა ნივთის მიღებისას</span>
 					</div>
 
 				</div>
@@ -190,31 +186,26 @@ if ( post_password_required() ) {
 						<input type="number" min="1" max="<?php echo $product->get_stock_quantity() ?>" value="1" name="quick_order_quantity" class="calculate__result" />
 						<span class="calculate" data-count="1" onclick="calculate(this)"><i class="uil uil-plus-square"></i></span>
 					</div>
-					<button type="submit" class="unico-form__button"><i class="uil uil-shopping-cart"></i>შეძენა</button>
+					<a href="tel:577156611" class="unico-form__button d-flex justify-content-center align-items-center"><i class="uil uil-phone mr-4"></i>577 15 66 11</a>
 				</div>
 
-				<a href="tel:555443322" class="unico-button__red mt-4"><i class="uil uil-phone mr-4"></i>555-99-44-33</a>
-				<div class="unico-form__body mt-5">
-
-					<div class="">
-						<div class="unico-proposition__container">
-							<i class="uil uil-check"></i>
-							<span class="unico-proposition__title">2 წლიანი გარანტია</span>
-						</div>
-						<div class="unico-proposition__container">
-							<i class="uil uil-check"></i>
-							<span class="unico-proposition__title">2 წლიანი გარანტია</span>
-						</div>
+				<button type="submit" class="unico-button__red mt-4"><i class="uil uil-shopping-cart mr-3"></i>შეძენა</button>
+				<div class="unico-form__propositions mt-5">
+					<div class="unico-proposition__container">
+						<i class="uil uil-shield"></i>
+						<span class="unico-proposition__title">გარანტია თითოეულ პროდუქტზე</span>
 					</div>
-					<div class="">
-						<div class="unico-proposition__container">
-							<i class="uil uil-check"></i>
-							<span class="unico-proposition__title">2 წლიანი გარანტია</span>
-						</div>
-						<div class="unico-proposition__container">
-							<i class="uil uil-check"></i>
-							<span class="unico-proposition__title">2 წლიანი გარანტია</span>
-						</div>
+					<div class="unico-proposition__container">
+						<i class="uil uil-truck"></i>
+						<span class="unico-proposition__title">მიწოდების სერვისი მთელი საქართველოს მასშტაბით</span>
+					</div>
+					<div class="unico-proposition__container">
+						<i class="uil uil-repeat"></i>
+						<span class="unico-proposition__title">ნივთის დაბრუნების პოლიტიკა</span>
+					</div>
+					<div class="unico-proposition__container">
+						<i class="uil uil-money-withdraw"></i>
+						<span class="unico-proposition__title">თანხის გადახდა ნივთის მიღებისას</span>
 					</div>
 
 				</div>
@@ -254,7 +245,7 @@ if ( post_password_required() ) {
 				<div class="col-md-6 col-12 p-0 d-md-block d-none">
 					<div class="unico-hurryup">
 						<h3 class="unico-hurryup__title">იჩქარე!</h3>
-						<span class="unico-hurryup__text">დარჩენილია მხოლოდ <?php echo $product->get_stock_quantity(); ?></span>
+						<p class="unico-hurryup__text">დარჩენილია მხოლოდ <span>1</span></p>
 						<span class="unico-hurryup__text--subtext">ყიდვა</span>
 					</div>
 				</div>

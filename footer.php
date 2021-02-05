@@ -8,7 +8,7 @@
           ));
         } ?>
 
-      <span class="footer__unico">design with <span class="unico-text__red">♥</span> by unico.ge</span>
+      <span class="footer__unico">designed with <span class="unico-text__red">♥</span> by unico.ge</span>
     </div>
   </div>
 </footer>

@@ -30,7 +30,7 @@ jQuery(function($) {
   
   $(".unico-slider__products").slick({
     variableWidth : true,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     arrows : false,
     infinite: false
   });
@@ -191,7 +191,7 @@ productOrder.forEach(item => {
               <div class="unico-description__container animate__animated animate__fadeInRight mt-5" style="background-color : var(--unico-red)">
                 <h2 class="w-100 text-center text-light">თქვენი შეკვეთა გადაცემულია !</h2>
                 <span class="w-100 text-center text-light my-3">ჩვენი ოპერატორი მალე დაგიკავშირდებათ შემდეგ ნომერზე</span>
-                <h3 class="w-100 text-center text-light">58843213</h3>
+                <h3 class="w-100 text-center text-light">${phoneNumber}</h3>
               </div>
             `;
           })
@@ -314,5 +314,6 @@ class Butaforia {
 
 const butaforia = new Butaforia();
 const circleCount = document.querySelectorAll(".circle__count");
+const hurryupCount = document.querySelector(".unico-hurryup__text > span");
 
-butaforia.render(circleCount);
+butaforia.render([...circleCount, hurryupCount]);

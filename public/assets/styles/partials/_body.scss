@@ -309,6 +309,11 @@
   width : 100%;
 }
 
+.unico-form__propositions {
+  @include flex(column, space-between, start);
+  width : 100%;
+}
+
 .unico-calculator {
   width : 20rem;
   height : 6rem;

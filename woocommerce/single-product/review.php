@@ -103,7 +103,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 
 			<div class="d-flex justify-content-between w-100">
-				<span class="comment__answer">პასუხის გაცემა</span>
 
 				<div class="unico-info__rating d-md-none d-flex">
 					<?php

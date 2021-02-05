@@ -64,10 +64,9 @@ if ( !function_exists( 'deals_libraries' ) ) {
 if ( !function_exists( 'deals_vital' ) ) {
 
   function deals_vital() {
+    $styleVersion = '1.0';
     wp_enqueue_style( 'stylesheet', get_template_directory_uri() . '/style.css', '', 1, 'all' );
-
-    $rand = rand( 1, 99999999999 );
-    wp_enqueue_style( 'unico_deals_stylesheet', get_template_directory_uri() . '/public/assets/styles/main.css', '', $rand, 'all' );
+    wp_enqueue_style( 'unico_deals_stylesheet', get_template_directory_uri() . '/public/assets/styles/main.css', '', $styleVersion, 'all' );
 
     wp_register_script( 'deals_script', get_template_directory_uri() . '/public/assets/scripts/main.js', array('jquery'), '', true );
     wp_enqueue_script( 'deals_script' );
@@ -133,9 +132,11 @@ add_action('wp_ajax_create_custom_order', 'create_custom_order');
 
 function create_custom_order() {
   if($_SERVER["REQUEST_METHOD"] == "POST") {
+    $full_name = explode( " ", $_POST['fullname'] );
+
     $address = array(
-      'first_name' => $_POST['fullname'],
-      'last_name' => $_POST['fullname'],
+      'first_name' => $full_name[0],
+      'last_name' => $full_name[1],
       'phone' => $_POST['phone'],
     );
     

@@ -35,11 +35,12 @@
 
   .product-article {
     margin-right : 2rem;
+    width: 20rem;
+    text-align: center;
 
     .img__container {
-      width : 20rem;
-      height : 20rem;
       margin-bottom : 1.6rem;
+      overflow: hidden;
 
       @include flex(row, center, center);
     }

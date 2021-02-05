@@ -167,7 +167,7 @@
     </div>
   </section>
   <!-- DESCRIPTION -->
-  <section class="row">
+  <section class="row px-md-0 px-4">
     <div class="col-md-6 col-12 p-0" data-aos="flip-right" data-aos-duration="1000">
       <div class="unico-description__container">
         <h2 class="unico-description__title">პროდუქტის აღწერა</h2>
@@ -192,7 +192,7 @@
           <div class="col-md-6 col-12 p-0 d-md-block d-none">
             <div class="unico-hurryup">
               <h3 class="unico-hurryup__title">იჩქარე!</h3>
-              <span class="unico-hurryup__text">დარჩენილია მხოლოდ <?php the_field('quantity'); ?></span>
+              <p class="unico-hurryup__text">დარჩენილია მხოლოდ <span>1</span></p>
               <span class="unico-hurryup__text--subtext">ყიდვა</span>
             </div>
           </div>

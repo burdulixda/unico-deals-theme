@@ -1127,6 +1127,23 @@ input[type=number] {
   width: 100%;
 }
 
+.unico-form__propositions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  width: 100%;
+}
+
 .unico-calculator {
   width: 20rem;
   height: 6rem;
@@ -1690,12 +1707,13 @@ input[type=number] {
 
 .unico-slider__products .product-article {
   margin-right: 2rem;
+  width: 20rem;
+  text-align: center;
 }
 
 .unico-slider__products .product-article .img__container {
-  width: 20rem;
-  height: 20rem;
   margin-bottom: 1.6rem;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1850,6 +1868,7 @@ footer {
 
 .modal-content {
   border-radius: var(--radius-md);
+  margin-top: 10%;
 }
 
 .slider-modal {
