@@ -45,4 +45,20 @@
   .logo__red {color : var(--unico-red)}
   .logo__blue {color : var(--unico-blue)}
   .logo__purple {color : var(--unico-purple)}
+
+  &:nth-child(1) {
+    border : 1px solid var(--unico-yellow);
+  }
+
+  &:nth-child(2) {
+    border : 1px solid var(--unico-red);
+  }
+  
+  &:nth-child(3) {
+    border : 1px solid var(--unico-blue);
+  }
+
+  &:nth-child(4) {
+    border : 1px solid var(--unico-purple);
+  }
 }
