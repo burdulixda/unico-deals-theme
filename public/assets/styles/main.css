@@ -2015,6 +2015,9 @@ footer {
   #section-head {
     margin-bottom: 3rem;
   }
+  #imgModal {
+    top: 25%;
+  }
   .unico-info__title {
     font-size: var(--font-xl) !important;
   }
