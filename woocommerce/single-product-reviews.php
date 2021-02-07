@@ -27,7 +27,7 @@ if ( ! comments_open() ) {
 <div id="reviews" class="woocommerce-Reviews comment__container">
 	<div class="comment__title--container">
 		<h2 class="comment__title animate__animated animate__fadeInRight">
-			<span class="comment__title--bold">რეკომენდირებულია </span>გამოკითხული მომხმარებელთა <span class="comment__title--blue">99.9%</span>-ის მიერ
+			<span class="comment__title--bold">რეკომენდირებულია </span>გამოკითხულ მომხმარებელთა <span class="comment__title--blue">99.9%</span>-ის მიერ
 		</h2>
 	</div>
 	<div id="comments" class="comments__container">
