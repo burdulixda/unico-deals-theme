@@ -51,7 +51,7 @@
         <span id="depended_circle_count" class="circle__count"></span>
       </div>
     </div>
-    <div class="container unico-container unico-navbar">
-      <?php if (function_exists('the_custom_logo')) the_custom_logo(); ?>
-    </div>
+    <!-- <div class="container unico-container unico-navbar">
+      <?php // if (function_exists('the_custom_logo')) the_custom_logo(); ?>
+    </div> -->
   </header>

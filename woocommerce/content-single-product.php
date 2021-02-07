@@ -115,7 +115,7 @@ if ( post_password_required() ) {
 		</div>
 
 		<div class="unico-form__container d-md-none d-block animate__animated animate__bounce">
-			<h2 class="unico-form__title">შეუკვეთე ახლავე</h2>
+			<h2  class="unico-form__title">შეუკვეთე ახლავე</h2>
 			<form class="unico-form" method="POST" action="/">
 				<input type="text" name="fullname" class="unico-input" placeholder="სახელი, გვარი" required />
 				<input type="text" name="phone" class="unico-input" placeholder="ნომერი" required />
@@ -246,7 +246,9 @@ if ( post_password_required() ) {
 					<div class="unico-hurryup">
 						<h3 class="unico-hurryup__title">იჩქარე!</h3>
 						<p class="unico-hurryup__text">დარჩენილია მხოლოდ <span>1</span></p>
-						<span class="unico-hurryup__text--subtext">ყიდვა</span>
+						<a href="#checkoutForm">
+							<span class="unico-hurryup__text--subtext">ყიდვა</span>
+						</a>
 					</div>
 				</div>
 

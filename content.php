@@ -193,7 +193,9 @@
             <div class="unico-hurryup">
               <h3 class="unico-hurryup__title">იჩქარე!</h3>
               <p class="unico-hurryup__text">დარჩენილია მხოლოდ <span>1</span></p>
-              <span class="unico-hurryup__text--subtext">ყიდვა</span>
+              <a href="#checkoutForm">
+                <span class="unico-hurryup__text--subtext">ყიდვა</span>
+              </a>
             </div>
           </div>
 
