@@ -628,11 +628,6 @@ input[type=number] {
           align-items: center;
 }
 
-.unico-navbar img {
-  width: 8.8rem;
-  height: 3rem;
-}
-
 .unico-sticky {
   background: var(--unico-blue);
   position: -webkit-sticky;
