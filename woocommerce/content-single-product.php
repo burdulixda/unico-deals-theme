@@ -217,7 +217,7 @@ if ( post_password_required() ) {
 
 </section>
 
-<div class="row" style="margin-bottom  : 20rem">
+<div class="row mx-4" style="margin-bottom  : 20rem">
 
 	<div class="col-md-6 col-12 p-0">
 		<div class="unico-description__container">
