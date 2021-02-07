@@ -256,7 +256,7 @@ if ( post_password_required() ) {
 		</div>
 	</div>
 
-	<div class="col-md-6 col-12 p-0 pl-md-5 pl-0 mt-md-0 mt-5" data-aos="flip-left" data-aos-duration="1500" data-aos-delay="delay">
+	<div class="col-md-6 col-12 p-0 pl-md-5 pl-0 mt-md-0 mt-5">
 		<div class="unico-attributes__container">
 			<h2 class="unico-description__title">მახასიათებლები</h2>
 			<?php do_action( 'woocommerce_product_additional_information', $product ); ?>
