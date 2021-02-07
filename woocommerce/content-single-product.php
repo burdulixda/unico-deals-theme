@@ -273,8 +273,8 @@ if ( post_password_required() ) {
 
 <section class="container-fluid unico-gradient__purple p-0">
 	<div class="products__container">
-		<span class="products__title" data-aos="fade-right" data-aos-duration="1000">მსგავსი <span class="products__title--bold">შეთავაზებები</span></span>
-		<div class="slider-products__container" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">
+		<span class="products__title">მსგავსი <span class="products__title--bold">შეთავაზებები</span></span>
+		<div class="slider-products__container">
 			<div class="unico-slider__products">
 				<?php do_action('unico_deal_related_products'); ?>
 			</div>
