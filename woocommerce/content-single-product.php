@@ -131,7 +131,7 @@ if ( post_password_required() ) {
 					<a href="tel:577156611" class="unico-form__button d-flex justify-content-center align-items-center"><i class="uil uil-phone mr-4"></i>577 15 66 11</a>
 				</div>
 				
-				<button type="submit" class="unico-button__red mt-4"><i class="uil uil-shopping-cart mr-3"></i>შეძენა</button>
+				<button type="submit" class="unico-button__red mt-4"><i class="uil uil-shopping-cart mr-3"></i>სწრაფი შეძენა</button>
 
 				<div class="unico-form__propositions mt-5">
 					<div class="unico-proposition__container">
@@ -189,7 +189,7 @@ if ( post_password_required() ) {
 					<a href="tel:577156611" class="unico-form__button d-flex justify-content-center align-items-center"><i class="uil uil-phone mr-4"></i>577 15 66 11</a>
 				</div>
 
-				<button type="submit" class="unico-button__red mt-4"><i class="uil uil-shopping-cart mr-3"></i>შეძენა</button>
+				<button type="submit" class="unico-button__red mt-4"><i class="uil uil-shopping-cart mr-3"></i>სწრაფი შეძენა</button>
 				<div class="unico-form__propositions mt-5">
 					<div class="unico-proposition__container">
 						<i class="uil uil-shield"></i>
