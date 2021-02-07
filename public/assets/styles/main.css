@@ -1299,7 +1299,7 @@ input[type=number] {
   height: 26rem;
 }
 
-.unico-slider__description--container .unico-slider__description .img__container img {
+.unico-slider__description--container .unico-slider__description .img__container picture, .unico-slider__description--container .unico-slider__description .img__container img {
   max-width: 100%;
   height: 100%;
 }
