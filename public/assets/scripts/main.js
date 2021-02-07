@@ -258,13 +258,16 @@ if(attributeItems.length > 0) {
 
 const attributeToggle = document.querySelector(".attributes-toggle");
 
-attributeToggle.onclick = (e) => {
-  attributeItems.forEach(item => {
-    item.classList.add("d-flex");
-  });
-
-  e.target.remove();
+if(attributeToggle) {
+  attributeToggle.onclick = (e) => {
+    attributeItems.forEach(item => {
+      item.classList.add("d-flex");
+    });
+  
+    e.target.remove();
+  }
 }
+
 
 
 class Butaforia {
@@ -313,3 +316,12 @@ const circleCount = document.querySelectorAll(".circle__count");
 const hurryupCount = document.querySelector(".unico-hurryup__text > span");
 
 butaforia.render([...circleCount, hurryupCount]);
+
+
+const priceOld = Number(document.querySelector(".price del").innerText.replace(/[^0-9.-]+/g,""));
+const priceNew = Number(document.querySelector(".price ins").innerText.replace(/[^0-9.-]+/g,""));
+
+const percentSale = document.querySelector(".sale__title--subtitle");
+const calculatedPercent = Math.ceil(((priceOld - priceNew) / priceOld)* 100);
+
+percentSale.innerText = `დაზოგე ${calculatedPercent}%`;
