@@ -9,7 +9,7 @@ $comments = $comments_query->query( $args );
 
 <?php if ($comments) : ?>
   <?php foreach ($comments as $comment) : ?>
-    <div class="comment__item" data-aos="fade-left" data-aos-duration="500" id="comment-<?php comment_ID() ?>">
+    <div class="comment__item" id="comment-<?php comment_ID() ?>">
 
       <div class="comment__avatar d-md-flex d-none">
         <img src="<?php echo get_avatar_url($comment) ?>" alt="avatar" />

@@ -65,7 +65,7 @@ if ( post_password_required() ) {
 
 	<div class="col-md-3 col-12 d-md-block d-none order-md-0 order-3 p-0">
 
-		<div class="unico-special" data-aos="fade-right" data-aos-delay="500">
+		<div class="unico-special">
 			<span class="absolute__circle"></span>
 			<h2 class="unico-special__title">კვირის სპეციალური შემოთავაზება</h2>
 			<div class="unico-special__circle">
@@ -91,7 +91,7 @@ if ( post_password_required() ) {
 
 	<div class="col-md-5 col-12 d-flex flex-column order-md-1 order-2 p-0">
 	
-		<div class="d-flex justify-content-between align-items-center" data-aos="zoom-in" data-aos-duration="2000">
+		<div class="d-flex justify-content-between align-items-center">
 
 			<div class="slider-top__for">
 				<img src="<?php echo $product_thumbnail ?>" data-toggle="modal" data-target="#imgModal" alt="slider-img" class="slider__active" />
@@ -219,7 +219,7 @@ if ( post_password_required() ) {
 
 <div class="row" style="margin-bottom  : 20rem">
 
-	<div class="col-md-6 col-12 p-0" data-aos="flip-right" data-aos-duration="1000">
+	<div class="col-md-6 col-12 p-0">
 		<div class="unico-description__container">
 			<h2 class="unico-description__title">პროდუქტის აღწერა</h2>
 			<?php do_action('unico_deal_single_product_excerpt'); ?>

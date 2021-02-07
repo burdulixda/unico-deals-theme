@@ -3,7 +3,7 @@
   <section class="row">
     <div class="col-md-3 col-12 d-md-block d-none order-md-0 order-3 p-0">
 
-      <div class="unico-special" data-aos="fade-right" data-aos-delay="500">
+      <div class="unico-special">
         <span class="absolute__circle"></span>
         <h2 class="unico-special__title">კვირის სპეციალური შემოთავაზება</h2>
         <div class="unico-special__circle">
@@ -29,7 +29,7 @@
     </div>
 
     <div class="col-md-5 col-12 d-flex flex-column order-md-1 order-2 p-0">
-      <div class="d-flex justify-content-between align-items-center" data-aos="zoom-in" data-aos-duration="2000">
+      <div class="d-flex justify-content-between align-items-center">
         <div class="slider-top__for">
           <?php foreach ($galleries as $gallery) : ?>
             <?php foreach ($gallery as $key => $value) : ?>
@@ -102,7 +102,7 @@
 
     <div class="col-md-4 col-12 order-md-2 order-1 p-0">
       <div class="unico-info">
-        <h1 class="unico-info__title" data-aos="fade-left" data-aos-duration="1000"><?php the_title(); ?></h1>
+        <h1 class="unico-info__title"><?php the_title(); ?></h1>
         <div class="unico-info__attributes animate__animated animate__fadeInLeft">
           <div class="unico-info__price">
             <span class="price price__sale"><?php the_field('price') ?> ₾</span>
@@ -168,7 +168,7 @@
   </section>
   <!-- DESCRIPTION -->
   <section class="row px-md-0 px-4">
-    <div class="col-md-6 col-12 p-0" data-aos="flip-right" data-aos-duration="1000">
+    <div class="col-md-6 col-12 p-0">
       <div class="unico-description__container">
         <h2 class="unico-description__title">პროდუქტის აღწერა</h2>
         <?php the_excerpt(); ?>
@@ -203,7 +203,7 @@
       </div>
     </div>
 
-    <div class="col-md-6 col-12 p-0 pl-md-5 pl-0 mt-md-0 mt-5" data-aos="flip-left" data-aos-duration="1500" data-aos-delay="delay">
+    <div class="col-md-6 col-12 p-0 pl-md-5 pl-0 mt-md-0 mt-5">
       <div class="unico-attributes__container">
         <h2 class="unico-description__title">მახასიათებლები</h2>
         <ul class="attributes__container">
@@ -245,7 +245,7 @@
           endif; ?>
 
       </div>
-      <div class="w-100 d-flex justify-content-center" data-aos="flip-up" data-aos-duration="1000">
+      <div class="w-100 d-flex justify-content-center">
         <button class="comment__button">კომენტარი დამატება</button>
       </div>
 

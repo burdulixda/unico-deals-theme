@@ -1,7 +1,3 @@
-AOS.init({
-  once: true
-});
-
 function changeTopSlider(e) {
   const elementNumber = e.dataset.img;
   

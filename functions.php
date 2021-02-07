@@ -66,9 +66,6 @@ if ( !function_exists( 'bootstrap' ) ) {
 if ( !function_exists( 'deals_libraries' ) ) {
 
   function deals_libraries() {
-    wp_enqueue_style( 'aos_css', 'https://unpkg.com/aos@2.3.1/dist/aos.css' );
-    wp_enqueue_script( 'aos_js', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array(), '', true );
-
     wp_enqueue_style( 'slick_css', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' );
     wp_enqueue_script( 'slick_js', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), '', true );
 

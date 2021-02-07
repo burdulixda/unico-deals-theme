@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 ?>
-<li <?php comment_class('comment__item'); ?> id="li-comment-<?php comment_ID(); ?>" data-aos="fade-left" data-aos-duration="500">
+<li <?php comment_class('comment__item'); ?> id="li-comment-<?php comment_ID(); ?>">
 
 	<div class="comment__avatar d-md-flex d-none">
 		<?php

@@ -56,7 +56,7 @@ if ( ! comments_open() ) {
 		<?php endif; ?>
 	</div>
 
-	<div div class="w-100 d-flex justify-content-center" data-aos="flip-up" data-aos-duration="1000">
+	<div div class="w-100 d-flex justify-content-center">
 		<button class="comment__button" data-target="#unicoAddComment" data-toggle="modal">კომენტარის დამატება</button>
 	</div>
 
