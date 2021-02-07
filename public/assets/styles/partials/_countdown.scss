@@ -51,6 +51,9 @@
   content : "წუთი";
   position : absolute;
 }
+.countdown__seconds {
+  color: var(--unico-red);
+}
 .countdown__seconds::before {
   display : block;
   content : "წამი";
