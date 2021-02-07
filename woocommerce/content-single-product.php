@@ -114,7 +114,7 @@ if ( post_password_required() ) {
 			</div>
 		</div>
 
-		<div class="unico-form__container d-md-none d-block animate__animated animate__bounce">
+		<div class="unico-form__container d-md-none d-block animate__animated animate__bounce p-3">
 			<h2  class="unico-form__title">შეუკვეთე ახლავე</h2>
 			<form class="unico-form" method="POST" action="/">
 				<input type="text" name="fullname" class="unico-input" placeholder="სახელი, გვარი" required />
@@ -123,15 +123,15 @@ if ( post_password_required() ) {
 				<input type="hidden" name="product_id" value="<?php echo $product->get_id() ?>" />
 
 				<div class="unico-form__body">
-					<div class="unico-calculator">
+					<div class="unico-calculator w-50">
 						<span class="calculate" data-count="-1" onclick="calculate(this)"><i class="uil uil-minus-square"></i></span>
 						<input type="number" min="1" max="<?php echo $product->get_stock_quantity() ?>" value="1" name="quick_order_quantity" class="calculate__result" />
 						<span class="calculate" data-count="1" onclick="calculate(this)"><i class="uil uil-plus-square"></i></span>
 					</div>
-					<a href="tel:577156611" class="unico-form__button d-flex justify-content-center align-items-center"><i class="uil uil-phone mr-4"></i>577 15 66 11</a>
+					<a href="tel:577156611" class="unico-form__button d-flex justify-content-center align-items-center w-50"><i class="uil uil-phone mr-4"></i>577 15 66 11</a>
 				</div>
 				
-				<button type="submit" class="unico-button__red mt-4"><i class="uil uil-shopping-cart mr-3"></i>სწრაფი შეძენა</button>
+				<button type="submit" class="unico-button__red mt-4 "><i class="uil uil-shopping-cart mr-3"></i>სწრაფი შეძენა</button>
 
 				<div class="unico-form__propositions mt-5">
 					<div class="unico-proposition__container">
@@ -172,7 +172,7 @@ if ( post_password_required() ) {
 			</div>
 		</div>
 
-		<div class="unico-form__container d-md-block d-none animate__animated animate__fadeInRight">
+		<div class="unico-form__container d-md-block d-none animate__animated animate__fadeInRight p-5">
 			<h2 class="unico-form__title">შეუკვეთე ახლავე</h2>
 			<form class="unico-form" method="POST" action="/">
 				<input type="text" name="fullname" class="unico-input" placeholder="სახელი, გვარი" required />
