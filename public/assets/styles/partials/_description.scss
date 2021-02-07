@@ -8,6 +8,8 @@
 
   .unico-description__title {
     color : #fff;
+    font-family: 'Helvetica-Neue-Bold';
+    font-feature-settings: 'case' 1;
     font-size : var(--font-xl);
     margin-bottom : 3.5rem;
   }
@@ -21,6 +23,8 @@
 
     .unico-hurryup__title {
       font-size : var(--font-lg);
+      font-family: 'Helvetica-Neue-Bold';
+      font-feature-settings: 'case' 1;
       color : #fff;
     }
 
@@ -32,6 +36,8 @@
 
     .unico-hurryup__text--subtext {
       @extend .unico-hurryup__text;
+      font-family: 'Helvetica-Neue-Bold';
+      font-feature-settings: 'case' 1;
       font-size : var(--font-sm);
       font-weight : bold;
     }

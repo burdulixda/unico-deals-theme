@@ -6,6 +6,8 @@
   border : 1px solid var(--unico-blue);
   border-radius : var(--radius-md);
   transition : .3s ease;
+  font-family: 'Helvetica-Neue-Bold';
+  font-feature-settings: 'case' 1;
 
   &:hover {
     background : var(--unico-blue);
@@ -29,13 +31,12 @@
     width : 50%;
     text-align : center;
     font-size : var(--font-lg);
+    font-family: 'Helvetica-Neue-Roman';
+    font-feature-settings: 'case' 1;
     margin-bottom : 5rem;
 
-    .comment__title--text {
-      margin-right : 1rem;
-    }
-
     .comment__title--bold {
+      font-family: 'Helvetica-Neue-Bold';
       font-weight : bold;
     }
 

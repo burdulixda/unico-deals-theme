@@ -55,6 +55,10 @@ body {
   background: var(--unico-background);
 }
 
+p {
+  font-family: 'Helvetica-Neue-Roman';
+}
+
 .unico-container {
   max-width: 144rem;
   padding: 0;
@@ -94,7 +98,7 @@ section:nth-child(2) {
 }
 
 .unico-text__bold {
-  font-weight: bold;
+  font-family: 'Helvetica-Neue-Bold';
 }
 
 .unico-text__red {
@@ -480,12 +484,17 @@ input[type=number] {
 
 @font-face {
   font-family: "Helvetica-75";
-  src: url("../../assets/fonts/helvetica-neue-bold.ttf") format("truetype");
+  src: url("../../assets/fonts/helvetica-75-bold-outline.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Avenir-Black";
   src: url("../../assets/fonts/Avenir-Black.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Avenir-Medium";
+  src: url("../../assets/fonts/Avenir-Medium.ttf") format("truetype");
 }
 
 .countdown {
@@ -518,6 +527,8 @@ input[type=number] {
   font-size: var(--font-xl);
   font-family: Avenir-Black;
   font-weight: bolder;
+  -webkit-font-feature-settings: 'case' 1;
+          font-feature-settings: 'case' 1;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -672,16 +683,18 @@ input[type=number] {
 }
 
 .unico-sticky .unico-sale__container .sale__title--container .sale__title {
-  font-size: var(--font-xl);
   color: #fff;
   margin-bottom: 1.2rem;
-  font-family: Helvetica-Neue-Bold;
+  font-family: 'Helvetica-Neue-Bold';
+  -webkit-font-feature-settings: 'case' 1;
+          font-feature-settings: 'case' 1;
+  font-size: var(--font-xl);
 }
 
 .unico-sticky .unico-sale__container .sale__title--container .sale__title--subtitle {
   font-size: var(--font-md);
   color: #fff;
-  font-family: Helvetica-Neue-Roman;
+  font-family: 'Helvetica-Neue-Roman';
 }
 
 .sticky__active {
@@ -774,6 +787,7 @@ input[type=number] {
 
 .unico-special__mobile .unico-special__mobile--circle .circle__count {
   color: var(--unico-red);
+  font-family: 'Avenir-Black';
   font-size: var(--font-xl);
   font-weight: bold;
 }
@@ -784,6 +798,9 @@ input[type=number] {
 
 .unico-special .unico-special__title {
   width: 24.5rem;
+  font-family: 'Helvetica-Neue-Bold';
+  -webkit-font-feature-settings: 'case' 1;
+          font-feature-settings: 'case' 1;
   font-size: var(--font-md);
   color: #fff;
   position: relative;
@@ -792,6 +809,7 @@ input[type=number] {
 
 .unico-special .unico-special__title--subtitle {
   color: #fff;
+  font-family: 'Helvetica-Neue-Roman';
   position: relative;
   z-index: 1;
 }
@@ -821,11 +839,15 @@ input[type=number] {
 }
 
 .unico-special .unico-special__circle .circle__count {
+  font-family: 'Avenir-Black';
   font-size: var(--font-xl);
   color: var(--unico-red);
 }
 
 .unico-special .unico-special__circle .circle__count--word {
+  font-family: 'Helvetica-Neue-Bold';
+  -webkit-font-feature-settings: 'case' 1;
+          font-feature-settings: 'case' 1;
   color: var(--unico-red);
 }
 
@@ -919,6 +941,7 @@ input[type=number] {
 
 .unico-info .unico-info__title {
   font-size: var(--font-xxl);
+  font-family: 'Avenir-Black';
   color: #000;
   font-weight: bold;
 }
@@ -955,6 +978,7 @@ input[type=number] {
       -ms-flex-align: center;
           align-items: center;
   margin: 4rem 0;
+  font-family: 'Helvetica-Neue-Bold';
 }
 
 .unico-info .unico-info__price .price bdi {
@@ -1017,6 +1041,9 @@ input[type=number] {
 
 .unico-form__container .unico-form__title {
   font-size: var(--font-lg);
+  font-family: 'Helvetica-Neue-Bold';
+  -webkit-font-feature-settings: 'case' 1;
+          font-feature-settings: 'case' 1;
   color: var(--unico-blue);
   position: relative;
 }
@@ -1055,6 +1082,7 @@ input[type=number] {
   border-radius: var(--radius-lg);
   padding: 0 2.5rem;
   margin-bottom: 1rem;
+  font-family: 'Helvetica-Neue-Roman';
 }
 
 .unico-form__container .unico-form__button {
@@ -1066,6 +1094,7 @@ input[type=number] {
   border: 1px solid transparent;
   -webkit-transition: .3s ease;
   transition: .3s ease;
+  font-family: 'Helvetica-Neue-Bold';
 }
 
 .unico-form__container .unico-form__button:hover {
@@ -1081,6 +1110,9 @@ input[type=number] {
   border: 1px solid transparent;
   border-radius: 5rem;
   color: #fff;
+  font-family: 'Helvetica-Neue-Bold';
+  -webkit-font-feature-settings: 'case' 1;
+          font-feature-settings: 'case' 1;
   font-size: 2rem;
   font-weight: bold;
   -webkit-transition: .3s ease;
@@ -1141,6 +1173,7 @@ input[type=number] {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
+  font-family: 'Helvetica-Neue-Roman';
   width: 100%;
 }
 
@@ -1183,7 +1216,8 @@ input[type=number] {
 }
 
 .unico-calculator .calculate__result {
-  max-widtH: 20%;
+  font-family: 'Avenir-Black';
+  max-width: 20%;
   background: transparent;
   border: none;
   text-align: center;
@@ -1215,6 +1249,9 @@ input[type=number] {
 
 .unico-description__container .unico-description__title, .unico-attributes__container .unico-description__title {
   color: #fff;
+  font-family: 'Helvetica-Neue-Bold';
+  -webkit-font-feature-settings: 'case' 1;
+          font-feature-settings: 'case' 1;
   font-size: var(--font-xl);
   margin-bottom: 3.5rem;
 }
@@ -1241,6 +1278,9 @@ input[type=number] {
 
 .unico-description__container .unico-hurryup .unico-hurryup__title, .unico-attributes__container .unico-hurryup .unico-hurryup__title {
   font-size: var(--font-lg);
+  font-family: 'Helvetica-Neue-Bold';
+  -webkit-font-feature-settings: 'case' 1;
+          font-feature-settings: 'case' 1;
   color: #fff;
 }
 
@@ -1251,6 +1291,9 @@ input[type=number] {
 }
 
 .unico-description__container .unico-hurryup .unico-hurryup__text--subtext, .unico-attributes__container .unico-hurryup .unico-hurryup__text--subtext {
+  font-family: 'Helvetica-Neue-Bold';
+  -webkit-font-feature-settings: 'case' 1;
+          font-feature-settings: 'case' 1;
   font-size: var(--font-sm);
   font-weight: bold;
 }
@@ -1417,6 +1460,9 @@ input[type=number] {
   border-radius: var(--radius-md);
   -webkit-transition: .3s ease;
   transition: .3s ease;
+  font-family: 'Helvetica-Neue-Bold';
+  -webkit-font-feature-settings: 'case' 1;
+          font-feature-settings: 'case' 1;
 }
 
 .comment__button:hover {
@@ -1451,14 +1497,14 @@ input[type=number] {
   width: 50%;
   text-align: center;
   font-size: var(--font-lg);
+  font-family: 'Helvetica-Neue-Roman';
+  -webkit-font-feature-settings: 'case' 1;
+          font-feature-settings: 'case' 1;
   margin-bottom: 5rem;
 }
 
-.comment__container .comment__title .comment__title--text {
-  margin-right: 1rem;
-}
-
 .comment__container .comment__title .comment__title--bold {
+  font-family: 'Helvetica-Neue-Bold';
   font-weight: bold;
 }
 
@@ -1690,11 +1736,15 @@ input[type=number] {
   width: 22rem;
   color: #fff;
   font-size: var(--font-lg);
+  font-family: 'Helvetica-Neue-Roman';
+  -webkit-font-feature-settings: 'case' 1;
+          font-feature-settings: 'case' 1;
   margin-right: 15rem;
 }
 
 .products__container .products__title .products__title--bold {
   font-weight: bold;
+  font-family: 'Helvetica-Neue-Bold';
 }
 
 .products__container .slider-products__container {
@@ -1734,6 +1784,7 @@ input[type=number] {
   width: 20rem;
   height: 5.5rem;
   overflow: hidden;
+  font-family: 'Avenir-Medium';
 }
 
 .services__container .services__intro {
@@ -1756,11 +1807,15 @@ input[type=number] {
 .services__container .services__intro .services__title {
   font-size: var(--font-lg);
   margin-bottom: 2rem;
+  font-family: 'Helvetica-Neue-Roman';
+  -webkit-font-feature-settings: 'case' 1;
+          font-feature-settings: 'case' 1;
 }
 
 .services__container .services__intro .services__title--subtitle {
   font-size: var(--font-sm);
   color: var(--unico-gray);
+  font-family: 'Helvetica-Neue-Roman';
 }
 
 .services__container .services {
@@ -1809,6 +1864,9 @@ input[type=number] {
 
 .service__item .service__title {
   color: var(--unico-black);
+  font-family: 'Helvetica-Neue-Roman';
+  -webkit-font-feature-settings: 'case' 1;
+          font-feature-settings: 'case' 1;
 }
 
 .service__item .logo__yellow {
@@ -1867,6 +1925,9 @@ footer {
 
 #menu-footer .menu-item {
   margin-right: 1.6rem;
+  font-family: 'Helvetica-Neue-Roman';
+  -webkit-font-feature-settings: 'case' 1;
+          font-feature-settings: 'case' 1;
 }
 
 .modal__close {

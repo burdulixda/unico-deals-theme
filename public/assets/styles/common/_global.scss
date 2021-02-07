@@ -63,6 +63,10 @@ body {
   background : var(--unico-background);
 }
 
+p {
+  font-family: 'Helvetica-Neue-Roman';
+}
+
 .unico-container {
   max-width : 144rem;
   padding : 0;
@@ -102,7 +106,7 @@ section {
 }
 
 .unico-text__bold {
-  font-weight : bold;
+  font-family: 'Helvetica-Neue-Bold';
 }
 
 .unico-text__red {

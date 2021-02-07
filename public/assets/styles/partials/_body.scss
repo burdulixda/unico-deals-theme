@@ -33,6 +33,7 @@
 
     .circle__count {
       color : var(--unico-red);
+      font-family: 'Avenir-Black';
       font-size : var(--font-xl);
       font-weight : bold;
     }
@@ -45,6 +46,8 @@
 
   .unico-special__title {
     width : 24.5rem;
+    font-family: 'Helvetica-Neue-Bold';
+    font-feature-settings: 'case' 1;
     font-size : var(--font-md);
     color : #fff;
 
@@ -54,6 +57,7 @@
 
   .unico-special__title--subtitle {
     color : #fff;
+    font-family: 'Helvetica-Neue-Roman';
 
     position : relative;
     z-index : 1;
@@ -73,11 +77,14 @@
     z-index : 1;
 
     .circle__count {
+      font-family: 'Avenir-Black';
       font-size : var(--font-xl);
       color : var(--unico-red);
     }
 
     .circle__count--word {
+      font-family: 'Helvetica-Neue-Bold';
+      font-feature-settings: 'case' 1;
       color : var(--unico-red);
     }
 
@@ -167,6 +174,7 @@
 .unico-info {
   .unico-info__title {
     font-size : var(--font-xxl);
+    font-family: 'Avenir-Black';
     color : #000;
     font-weight : bold;
   }
@@ -182,6 +190,7 @@
     .price {
       @include flex(row-reverse, flex-start, center);
       margin : 4rem 0;
+      font-family: 'Helvetica-Neue-Bold';
 
       bdi {
         font-weight : bold;
@@ -239,6 +248,8 @@
 .unico-form__container {
   .unico-form__title {
     font-size : var(--font-lg);
+    font-family: 'Helvetica-Neue-Bold';
+    font-feature-settings: 'case' 1;
     color : var(--unico-blue);
     position : relative;
 
@@ -265,6 +276,7 @@
     border-radius : var(--radius-lg);
     padding : 0 2.5rem;
     margin-bottom : 1rem;
+    font-family: 'Helvetica-Neue-Roman';
   }
 
   .unico-form__button {
@@ -275,6 +287,7 @@
     border-radius : var(--radius-lg);
     border : 1px solid transparent;
     transition : .3s ease;
+    font-family: 'Helvetica-Neue-Bold';
 
     &:hover {
       border-color : var(--unico-blue);
@@ -290,6 +303,8 @@
     border : 1px solid transparent;
     border-radius : 5rem;
     color : #fff;
+    font-family: 'Helvetica-Neue-Bold';
+    font-feature-settings: 'case' 1;
     font-size : 2rem;
     font-weight : bold;
     transition : .3s ease;
@@ -315,6 +330,7 @@
 
 .unico-form__propositions {
   @include flex(column, space-between, start);
+  font-family: 'Helvetica-Neue-Roman';
   width : 100%;
 }
 
@@ -345,7 +361,8 @@
   }
 
   .calculate__result {
-    max-widtH: 20%;
+    font-family: 'Avenir-Black';
+    max-width: 20%;
     background: transparent;
     border: none;
     text-align: center;

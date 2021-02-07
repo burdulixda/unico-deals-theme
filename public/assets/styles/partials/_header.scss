@@ -28,16 +28,17 @@
       @include flex(column, flex-start, flex-start);
 
       .sale__title {
-        font-size : var(--font-xl);
         color : #fff;
         margin-bottom : 1.2rem;
-        font-family: Helvetica-Neue-Bold;
+        font-family: 'Helvetica-Neue-Bold';
+        font-feature-settings: 'case' 1;
+        font-size : var(--font-xl);
       }
 
       .sale__title--subtitle {
         font-size : var(--font-md);
         color : #fff;
-        font-family: Helvetica-Neue-Roman;
+        font-family: 'Helvetica-Neue-Roman';
       }
     }
   }

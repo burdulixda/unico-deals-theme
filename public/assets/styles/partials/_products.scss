@@ -12,10 +12,13 @@
     width : 22rem;
     color : #fff;
     font-size : var(--font-lg);
+    font-family: 'Helvetica-Neue-Roman';
+    font-feature-settings: 'case' 1;
     margin-right : 15rem;
 
     .products__title--bold {
       font-weight : bold;
+      font-family: 'Helvetica-Neue-Bold';
     }
   }
 
@@ -49,6 +52,7 @@
       width : 20rem;
       height : 5.5rem;
       overflow : hidden;
+      font-family: 'Avenir-Medium';
     }
   }
 }

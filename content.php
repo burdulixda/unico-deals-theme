@@ -232,10 +232,7 @@
     <div class="comment__container">
       <div class="comment__title--container">
         <h2 class="comment__title animate__animated animate__fadeInRight">
-          <span class="comment__title--text comment__title--bold">რეკომენდირებულია</span>
-          <span class="comment__title--text comment__title--regular">გამოკითხული მომხმარებელთა </span>
-          <span class="comment__title--text comment__title--blue">99.9%</span>
-          <span class="comment__title--text comment__title--regular">-ის მიერ</span>
+          <span class="comment__title--bold">რეკომენდირებულია</span>გამოკითხული მომხმარებელთა<span class="comment__title--blue">99.9%</span>-ის მიერ
         </h2>
       </div>
 
