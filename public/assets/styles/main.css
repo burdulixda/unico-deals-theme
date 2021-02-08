@@ -1945,12 +1945,14 @@ input[type=number] {
 }
 
 .service__item {
-  width: 34rem;
-  height: 21rem;
+  width: 34.101rem;
+  height: 20.8rem;
   border-radius: var(--radius-md);
   background: #fff;
-  padding: 4rem;
+  padding: 4.2rem 4rem 3.8rem 4rem;
   margin-bottom: 1rem;
+  background-repeat: no-repeat;
+  line-height: 1.25;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1994,19 +1996,23 @@ input[type=number] {
 }
 
 .service__item:nth-child(1) {
-  border: 1px solid var(--unico-yellow);
+  background-color: rgba(248, 167, 20, 0.1);
+  background-image: url("../img/service-1.png");
 }
 
 .service__item:nth-child(2) {
-  border: 1px solid var(--unico-red);
+  background-color: rgba(249, 33, 98, 0.1);
+  background-image: url("../img/service-2.png");
 }
 
 .service__item:nth-child(3) {
-  border: 1px solid var(--unico-blue);
+  background-color: rgba(16, 91, 251, 0.1);
+  background-image: url("../img/service-3.png");
 }
 
 .service__item:nth-child(4) {
-  border: 1px solid var(--unico-purple);
+  background-color: rgba(142, 36, 249, 0.1);
+  background-image: url("../img/service-4.png");
 }
 
 footer {
@@ -2304,6 +2310,28 @@ footer {
     -webkit-box-pack: center !important;
         -ms-flex-pack: center !important;
             justify-content: center !important;
+  }
+  .services .service__item {
+    width: 34.501rem;
+    height: 18.8rem;
+    background-color: #fff;
+    background-size: cover;
+  }
+  .services .service__item:nth-child(1) {
+    background-image: url("../img/service-1-mobile.png");
+    background-position: right;
+  }
+  .services .service__item:nth-child(2) {
+    background-image: url("../img/service-2-mobile.png");
+    background-position: right;
+  }
+  .services .service__item:nth-child(3) {
+    background-image: url("../img/service-3-mobile.png");
+    background-position: right;
+  }
+  .services .service__item:nth-child(4) {
+    background-image: url("../img/service-4-mobile.png");
+    background-position: right;
   }
   #menu-footer {
     -webkit-box-orient: vertical;
