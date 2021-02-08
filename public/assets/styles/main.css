@@ -497,6 +497,49 @@ input[type=number] {
           animation-fill-mode: both;
 }
 
+@-webkit-keyframes shineEffect {
+  from {
+    left: -5rem;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes shineEffect {
+  from {
+    left: -5rem;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.unico-submit__animation {
+  position: relative;
+}
+
+.unico-submit__animation::before {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 15rem;
+  background: #fff;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  position: absolute;
+  top: -2rem;
+  left: -5rem;
+  -webkit-animation-name: shineEffect;
+          animation-name: shineEffect;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
 @media (max-width: 768px) {
   section {
     margin-bottom: 5rem !important;
@@ -805,6 +848,7 @@ input[type=number] {
   color: #fff;
   font-size: var(--font-sm);
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .unico-special__mobile .unico-special__mobile--circle {
@@ -1170,6 +1214,7 @@ input[type=number] {
           font-feature-settings: 'case' 1;
   font-size: 2rem;
   font-weight: bold;
+  overflow: hidden;
   -webkit-transition: .3s ease;
   transition: .3s ease;
   display: -webkit-box;
@@ -1726,6 +1771,7 @@ input[type=number] {
 
 .comment__item .comment__body .comment__body--text {
   margin-bottom: 1.6rem;
+  width: 100%;
 }
 
 .comment__item .comment__body .comment__answer {
@@ -1804,6 +1850,26 @@ input[type=number] {
       -ms-flex-order: 4;
           order: 4;
   width: 100%;
+}
+
+.dco-attachment img {
+  max-width: 100% !important;
+}
+
+.cld-like-wrap {
+  color: var(--unico-green);
+}
+
+.cld-like-wrap > a {
+  color: var(--unico-green);
+}
+
+.cld-dislike-wrap {
+  color: var(--unico-red);
+}
+
+.cld-dislike-wrap > a {
+  color: var(--unico-red);
 }
 
 .unico-gradient__purple {
@@ -2135,6 +2201,7 @@ footer {
 }
 
 #toast-container .toast {
+  opacity: 1;
   margin: 0 0 .6rem;
   padding: 1.5rem 1.5rem 1.5rem 6rem;
   width: 40rem;

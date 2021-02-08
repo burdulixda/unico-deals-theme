@@ -44,7 +44,7 @@
   </aside>
   <!-- HEADER -->
   <header class="container-fluid unico-header p-0">
-    <div class="container unico-container unico-special__mobile d-md-none d-block">
+    <div class="container unico-container unico-special__mobile d-flex flex-column justify-content-between d-md-none d-block">
       <h2 class="unico-special__mobile--title">კვირის სპეციალური შემოთავაზება</h2>
       <span class="unico-special__mobile--subtitle">მარაგში დარჩნილია მხოლოდ</span>
       <div class="unico-special__mobile--circle">

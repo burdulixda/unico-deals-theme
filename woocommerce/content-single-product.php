@@ -117,8 +117,8 @@ if ( post_password_required() ) {
 		<div class="unico-form__container d-md-none d-block animate__animated animate__bounce p-3">
 			<h2  class="unico-form__title">შეუკვეთე ახლავე</h2>
 			<form class="unico-form" method="POST" action="/">
-				<input type="text" name="fullname" class="unico-input input__name" placeholder="სახელი, გვარი" />
-				<input type="tel" name="phone" class="unico-input input__phone" placeholder="ნომერი" />
+				<input type="text" name="fullname" class="unico-input input__name" placeholder="სახელი, გვარი" data-valid="false" />
+				<input type="tel" name="phone" class="unico-input input__phone" placeholder="ნომერი" data-valid="false" />
 				<input type="hidden" name="sku" value="<?php echo $product->get_sku() ?>" />
 				<input type="hidden" name="product_id" value="<?php echo $product->get_id() ?>" />
 
@@ -175,8 +175,8 @@ if ( post_password_required() ) {
 		<div class="unico-form__container d-md-block d-none animate__animated animate__fadeInRight p-5">
 			<h2 class="unico-form__title">შეუკვეთე ახლავე</h2>
 			<form class="unico-form" method="POST" action="/">
-				<input type="text" name="fullname" class="unico-input input__name" placeholder="სახელი, გვარი" />
-				<input type="tel" name="phone" class="unico-input input__phone" placeholder="ნომერი" />
+				<input type="text" name="fullname" class="unico-input input__name" placeholder="სახელი, გვარი" data-valid="false" />
+				<input type="tel" name="phone" class="unico-input input__phone" placeholder="ნომერი" data-valid="false" />
 				<input type="hidden" name="sku" value="<?php echo $product->get_sku() ?>" />
 				<input type="hidden" name="product_id" value="<?php echo $product->get_id() ?>" />
 

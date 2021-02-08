@@ -392,6 +392,41 @@ input[type=number] {
 }
 
 
+@keyframes shineEffect {
+  from {
+    left : -5rem;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+// BUTTON ANIMATION
+.unico-submit__animation {
+  position : relative;
+
+  &::before {
+    content : "";
+    display : block;
+    width : 2.5rem;
+    height : 15rem;
+    background : #fff;
+    transform : rotate(30deg);
+    transition : 1s ease;
+
+    position : absolute;
+    top : -2rem;
+    left : -5rem;
+
+    animation-name : shineEffect;
+    animation-duration : 1s;
+    animation-fill-mode : both;
+    
+  }
+}
+
+
 @media (max-width : 768px) {
   section {
     margin-bottom : 5rem !important;
