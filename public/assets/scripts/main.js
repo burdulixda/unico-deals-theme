@@ -87,31 +87,27 @@ class Order {
     const name = nameField.value;
     const phone = phoneField.value;
 
-    if(name.length <= 2) {
-      this.popup("სახელისა და გვარის ველი არასწორადაა შევსებული!");
-      return false;
-    } else if (name.length > 30) {
-      this.popup("ძალიან ბევრი სიმბოლოა სახელისა და გვარის ველში");
-      return false;
-    } else if (!isNaN(name)) {
-      this.popup("სახელი არ უნდა შეიცავდეს ციფრებს!");
-      this.errorWrapper(nameField)
-      return false;
+    if(name.length <= 2 || name.length > 30 || !isNaN(name)) {
+      this.popup("სახელი ველი არასწორადაა შევსებული!");
+      nameField.dataset.valid = "false";
+    } else {
+      nameField.dataset.valid = "true";
     }
 
-    if(isNaN(phone)) {
-      this.popup("ნომერის ველში უნდა იყოს მხოლოდ ციფრები");
-      this.errorWrapper(phoneField);
-      return false;
-    } else if (phone.length < 6) {
-      this.popup("ძალიან მოკლე ნომერია")
-      return false;
-    } else if (phone.length > 13) {
-      this.popup("ძალიან გრძელი ნომერია");
-      return false;
+    if(isNaN(phone) || phone.length < 6 || phone.length > 13) {
+      this.popup("ნომრის ველი არასწორადაა შევსებული!");
+      phoneField.dataset.valid = "false";
+    } else {
+      phoneField.dataset.valid = "true";
     }
 
-    return true;
+    console.log(nameField.dataset.valid === "true", phoneField.dataset.valid === "true")
+
+    if(nameField.dataset.valid === "true" && phoneField.dataset.valid === "true") {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   popup = (value, duplicates = false) => {
@@ -120,7 +116,7 @@ class Order {
       "debug": false,
       "newestOnTop": true,
       "progressBar": true,
-      "positionClass": "toast-top-right",
+      "positionClass": "toast-bottom-right",
       "preventDuplicates": duplicates,
       "onclick": null,
       "showDuration": "300",
@@ -352,3 +348,17 @@ if(pricesArr.length > 0 && pricesArr[0] !== null && pricesArr[1] !== null) {
   percentSale.innerText = `დაზოგე ${calculatePercent}%`;
 }
 
+const unicoSubmitButton = document.querySelectorAll(".unico-button__red");
+
+if(unicoSubmitButton.length > 0) {
+  setInterval(() => {
+    unicoSubmitButton.forEach(item => {
+      item.classList.add("unico-submit__animation");
+    
+      const animationInterval = setTimeout(() => {
+        item.classList.remove("unico-submit__animation");
+        clearInterval(animationInterval);
+      }, 2000);
+    })
+  }, 4000)
+}

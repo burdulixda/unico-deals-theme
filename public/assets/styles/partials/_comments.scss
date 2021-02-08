@@ -106,6 +106,7 @@
 
     .comment__body--text {
       margin-bottom : 1.6rem;
+      width : 100%;
     }
 
     .comment__answer {
@@ -163,5 +164,27 @@
   .form-submit {
     order : 4;
     width : 100%;
+  }
+}
+
+// DCO ATTACHMENT
+.dco-attachment {
+  img {
+    max-width : 100% !important;
+  }
+}
+
+// LIKE DISLIKE
+.cld-like-wrap {
+  color : var(--unico-green);
+  &> a {
+    color : var(--unico-green);
+  }
+}
+
+.cld-dislike-wrap {
+  color : var(--unico-red);
+  &> a {
+    color : var(--unico-red);
   }
 }

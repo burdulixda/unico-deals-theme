@@ -15,6 +15,8 @@
     color : #fff;
     font-size : var(--font-sm);
     text-align : center;
+
+    margin-bottom : 1rem;
   }
 
   .unico-special__mobile--circle {
@@ -311,6 +313,7 @@
     font-feature-settings: 'case' 1;
     font-size : 2rem;
     font-weight : bold;
+    overflow : hidden;
     transition : .3s ease;
 
     @include flex(row, center, center);
