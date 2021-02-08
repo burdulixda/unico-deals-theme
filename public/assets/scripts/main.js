@@ -306,7 +306,7 @@ class Butaforia {
       }
       this.draw(el, currentCount);
       this.setStorage(currentCount--);
-    }, (~~(Math.random() * 20) + 15) * 200);
+    }, (~~(Math.random() * 20) + 15) * 1000);
 
   }
 
