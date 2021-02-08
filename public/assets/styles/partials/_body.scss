@@ -190,7 +190,7 @@
     
     .price {
       @include flex(row-reverse, flex-start, center);
-      margin : 4rem 0;
+      margin : 1rem 0;
       font-family: 'Helvetica-Neue-Bold';
 
       bdi {
@@ -206,6 +206,8 @@
   
       del {
         text-decoration : line-through;
+        margin-bottom: -1rem;
+        font-size: 1.9rem;
       }
     }
 
@@ -333,7 +335,7 @@
 }
 
 .unico-form__propositions {
-  @include flex(column, space-between, start);
+  // @include flex(column, space-between, start);
   font-family: 'Helvetica-Neue-Roman';
   width : 100%;
 }

@@ -61,7 +61,7 @@ if ( post_password_required() ) {
   </div>
 </aside>
 
-<section class="row">
+<section class="row m-3">
 
 	<div class="col-md-3 col-12 d-md-block d-none order-md-0 order-3 p-0">
 
@@ -190,29 +190,32 @@ if ( post_password_required() ) {
 				</div>
 
 				<button type="submit" class="unico-button__red mt-4"><i class="uil uil-shopping-cart mr-3"></i>სწრაფი შეძენა</button>
-				<div class="unico-form__propositions mt-5">
-					<div class="unico-proposition__container">
-						<i class="uil uil-shield"></i>
-						<span class="unico-proposition__title">გარანტია თითოეულ პროდუქტზე</span>
-					</div>
-					<div class="unico-proposition__container">
-						<i class="uil uil-truck"></i>
-						<span class="unico-proposition__title">მიწოდების სერვისი მთელი საქართველოს მასშტაბით</span>
-					</div>
-					<div class="unico-proposition__container">
-						<i class="uil uil-repeat"></i>
-						<span class="unico-proposition__title">ნივთის დაბრუნების პოლიტიკა</span>
-					</div>
-					<div class="unico-proposition__container">
-						<i class="uil uil-money-withdraw"></i>
-						<span class="unico-proposition__title">თანხის გადახდა ნივთის მიღებისას</span>
-					</div>
-
-				</div>
+				
 
 			</form>
 		</div>
 
+	</div>
+
+	<div class="col-12 order-4 d-none d-md-flex">
+		<div class="unico-form__propositions mt-5 d-md-flex justify-content-between align-items-center mb-5">
+			<div class="unico-proposition__container">
+				<i class="uil uil-shield"></i>
+				<span class="unico-proposition__title">გარანტია თითოეულ პროდუქტზე</span>
+			</div>
+			<div class="unico-proposition__container">
+				<i class="uil uil-truck"></i>
+				<span class="unico-proposition__title">მიწოდების სერვისი მთელი საქართველოს მასშტაბით</span>
+			</div>
+			<div class="unico-proposition__container">
+				<i class="uil uil-repeat"></i>
+				<span class="unico-proposition__title">ნივთის დაბრუნების პოლიტიკა</span>
+			</div>
+			<div class="unico-proposition__container">
+				<i class="uil uil-money-withdraw"></i>
+				<span class="unico-proposition__title">თანხის გადახდა ნივთის მიღებისას</span>
+			</div>
+		</div>
 	</div>
 
 </section>
@@ -265,13 +268,13 @@ if ( post_password_required() ) {
 
 </div>
 
-<section class="row d-flex justify-content-center">
+<section class="row d-flex justify-content-center m-3">
 	<?php do_action('unico_deal_single_product_reviews'); ?>
 </section>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
 
-<section class="container-fluid unico-gradient__purple p-0">
+<section class="container-fluid unico-gradient__purple p-0 my-5">
 	<div class="products__container">
 		<span class="products__title">მსგავსი <span class="products__title--bold">შეთავაზებები</span></span>
 		<div class="slider-products__container">

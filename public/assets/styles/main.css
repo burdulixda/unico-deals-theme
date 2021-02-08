@@ -11,7 +11,7 @@
   --unico-dark: #737373;
   --unico-purple: #8e24f9;
   --unico-black: #171717;
-  --font-xxl: 5.8rem;
+  --font-xxl: 4.5rem;
   --font-xl: 3.2rem;
   --font-lg: 2.8rem;
   --font-md: 2.2rem;
@@ -86,7 +86,6 @@ p {
 
 section {
   margin: 0 !important;
-  margin-bottom: 14rem !important;
 }
 
 section:nth-child(2) {
@@ -1026,7 +1025,7 @@ input[type=number] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 4rem 0;
+  margin: 1rem 0;
   font-family: 'Helvetica-Neue-Bold';
 }
 
@@ -1043,6 +1042,8 @@ input[type=number] {
 
 .unico-info .unico-info__price .price del {
   text-decoration: line-through;
+  margin-bottom: -1rem;
+  font-size: 1.9rem;
 }
 
 .unico-info .unico-info__rating .woocommerce-product-rating {
@@ -1214,19 +1215,6 @@ input[type=number] {
 }
 
 .unico-form__propositions {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
   font-family: 'Helvetica-Neue-Roman';
   width: 100%;
 }
@@ -1510,6 +1498,7 @@ input[type=number] {
 
 .unico-attributes__container .attributes-toggle {
   color: var(--unico-blue);
+  font-family: 'Helvetica-Neue-Roman';
   cursor: pointer;
 }
 

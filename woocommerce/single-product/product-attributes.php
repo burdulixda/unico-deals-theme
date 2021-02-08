@@ -32,4 +32,6 @@ if ( ! $product_attributes ) {
 	<?php endforeach; ?>
 </ul>
 
-<span class="attributes-toggle">ყველა მახასიათებლის ნახვა</span>
+<?php if (count($product_attributes) > 6) { ?>
+	<span class="attributes-toggle">ყველა მახასიათებლის ნახვა</span>
+<?php } ?>
