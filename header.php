@@ -16,7 +16,7 @@
       <div class="d-flex flex-md-row flex-column justify-content-between w-100 m-0">
         <div class="col-md-7 col-12 sale__title--container p-0">
           <h1 class="sale__title">აქციის დასრულებამდე დარჩენილია</h1>
-          <h3 class="sale__title--subtitle">დაზოგე 70%</h3>
+          <h3 class="sale__title--subtitle"></h3>
         </div>
 
         <?php include_once( ABSPATH . 'wp-admin/includes/plugin.php' );

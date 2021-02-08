@@ -332,10 +332,23 @@ const hurryupCount = document.querySelector(".unico-hurryup__text > span");
 butaforia.render([...circleCount, hurryupCount]);
 
 
-// const priceOld = Number(document.querySelector(".price del").innerText.replace(/[^0-9.-]+/g,""));
-// const priceNew = Number(document.querySelector(".price ins").innerText.replace(/[^0-9.-]+/g,""));
+const priceOld = document.querySelector(".price del");
+const priceNew = document.querySelector(".price ins");
 
-// const percentSale = document.querySelector(".sale__title--subtitle");
-// const calculatedPercent = Math.ceil(((priceOld - priceNew) / priceOld)* 100);
+const pricesArr = [priceOld, priceNew];
 
-// percentSale.innerText = `დაზოგე ${calculatedPercent}%`;
+if(pricesArr.length > 0 && pricesArr[0] !== null && pricesArr[1] !== null) {
+  const priceNumbersArr = [];
+
+  pricesArr.forEach(item => {
+    const priceNumber = Number(item.innerText.replace(/[^0-9.-]+/g,""));
+    priceNumbersArr.push(priceNumber);
+  })
+
+  const calculatePercent = Math.ceil(((priceNumbersArr[0] - priceNumbersArr[1]) / priceNumbersArr[0])* 100);
+
+  const percentSale = document.querySelector(".sale__title--subtitle");
+  
+  percentSale.innerText = `დაზოგე ${calculatePercent}%`;
+}
+
