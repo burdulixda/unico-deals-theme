@@ -368,6 +368,11 @@ input[type=number] {
   }
 }
 
+// ERROR
+.unico-error__wrapper {
+  border : 3px solid #ff0d56 !important;
+}
+
 
 @media (max-width : 768px) {
   section {

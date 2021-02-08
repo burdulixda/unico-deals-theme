@@ -83,17 +83,25 @@ class Order {
     return res;
   }
 
-  validateData = async (name, phone) => {
+  validateData = async (nameField, phoneField) => {
+    const name = nameField.value;
+    const phone = phoneField.value;
+
     if(name.length <= 2) {
       this.popup("სახელისა და გვარის ველი არასწორადაა შევსებული!");
       return false;
     } else if (name.length > 30) {
       this.popup("ძალიან ბევრი სიმბოლოა სახელისა და გვარის ველში");
       return false;
+    } else if (!isNaN(name)) {
+      this.popup("სახელი არ უნდა შეიცავდეს ციფრებს!");
+      this.errorWrapper(nameField)
+      return false;
     }
 
     if(isNaN(phone)) {
       this.popup("ნომერის ველში უნდა იყოს მხოლოდ ციფრები");
+      this.errorWrapper(phoneField);
       return false;
     } else if (phone.length < 6) {
       this.popup("ძალიან მოკლე ნომერია")
@@ -151,7 +159,6 @@ class Order {
       `;
     } else {
       const elements = document.querySelectorAll(".my-loader__container");
-      console.log(elements);
       elements.forEach(item => {
         item.remove();
       })
@@ -162,12 +169,11 @@ class Order {
 const order = new Order();
 
 productOrder.forEach(item => {
-  item.addEventListener("submit", async (e) => {
+  item.addEventListener("submit", (e) => {
     e.preventDefault();
-    console.log(e, e.target);
   
-    const fullName = e.target.fullname.value;
-    const phoneNumber = e.target.phone.value;
+    const fullName = e.target.fullname;
+    const phoneNumber = e.target.phone;
 
     const product_id = e.target.product_id.value;
     const product_sku = e.target.sku.value;
@@ -178,16 +184,17 @@ productOrder.forEach(item => {
     const valid = order.validateData(fullName, phoneNumber);
     valid.then(statement => {
       if(statement) {
+        item.parentNode.classList.remove("unico-error__wrapper");
         order.addToCart({product_id, product_sku, quantity})
         .then(() => {
-          order.registerOrder({name : fullName, phone : phoneNumber})
+          order.registerOrder({name : fullName.value, phone : phoneNumber.value})
           .then(res => {
             order.loader({rootElement : e.target, state : false});
             e.target.innerHTML = `
               <div class="unico-description__container animate__animated animate__fadeInRight mt-5" style="background-color : var(--unico-red)">
                 <h2 class="w-100 text-center text-light">თქვენი შეკვეთა გადაცემულია !</h2>
                 <span class="w-100 text-center text-light my-3">ჩვენი ოპერატორი მალე დაგიკავშირდებათ შემდეგ ნომერზე</span>
-                <h3 class="w-100 text-center text-light">${phoneNumber}</h3>
+                <h3 class="w-100 text-center text-light">${phoneNumber.value}</h3>
               </div>
             `;
           })
@@ -196,6 +203,7 @@ productOrder.forEach(item => {
         .catch(err => console.log(err));
       } else {
         order.loader({rootElement : e.target, state : false});
+        item.parentNode.classList.add("unico-error__wrapper");
       }
     });
   })
@@ -318,10 +326,10 @@ const hurryupCount = document.querySelector(".unico-hurryup__text > span");
 butaforia.render([...circleCount, hurryupCount]);
 
 
-const priceOld = Number(document.querySelector(".price del").innerText.replace(/[^0-9.-]+/g,""));
-const priceNew = Number(document.querySelector(".price ins").innerText.replace(/[^0-9.-]+/g,""));
+// const priceOld = Number(document.querySelector(".price del").innerText.replace(/[^0-9.-]+/g,""));
+// const priceNew = Number(document.querySelector(".price ins").innerText.replace(/[^0-9.-]+/g,""));
 
-const percentSale = document.querySelector(".sale__title--subtitle");
-const calculatedPercent = Math.ceil(((priceOld - priceNew) / priceOld)* 100);
+// const percentSale = document.querySelector(".sale__title--subtitle");
+// const calculatedPercent = Math.ceil(((priceOld - priceNew) / priceOld)* 100);
 
-percentSale.innerText = `დაზოგე ${calculatedPercent}%`;
+// percentSale.innerText = `დაზოგე ${calculatedPercent}%`;

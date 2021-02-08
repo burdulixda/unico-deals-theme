@@ -269,7 +269,7 @@
 
   .unico-form {
     @include flex(column, flex-start, flex-start);
-    margin : 3rem 0;
+    margin : 3rem 0 0 0;
   }
 
   .unico-input {
@@ -375,8 +375,50 @@
 
 // PROPOSITION
 .unico-proposition__container {
+  @include flex(row, flex-start, center);
+  margin-bottom : 1rem;
   i {
-    color : var(--unico-green);
+    color : #fff;
+    font-size : 2.3rem;
     margin-right : 1.5rem;
+
+    width: 5rem;
+    height: 5rem;
+    background: transparent;
+    border: 3px solid transparent;
+    flex-shrink: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+
+  &:nth-child(1) {
+
+    i {
+      background-color : #105afb74;
+      border-color : #105bfb;
+    }
+  }
+  &:nth-child(2) {
+
+    i {
+      background-color : #ff887077;
+      border-color : #ff8970;
+    }
+  }
+  &:nth-child(3) {
+
+    i {
+      background-color : #1cbf2f7e;
+      border-color : #1cbf2f;
+    }
+  }
+  &:nth-child(4) {
+
+    i {
+      background-color : #8e24f977;
+      border-color : #8e24f9;
+    }
   }
 }
