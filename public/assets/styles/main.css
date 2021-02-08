@@ -1853,6 +1853,7 @@ input[type=number] {
   padding: 4.2rem 4rem 3.8rem 4rem;
   margin-bottom: 1rem;
   background-repeat: no-repeat;
+  line-height: 1.25;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2210,6 +2211,28 @@ footer {
     -webkit-box-pack: center !important;
         -ms-flex-pack: center !important;
             justify-content: center !important;
+  }
+  .services .service__item {
+    width: 34.501rem;
+    height: 18.8rem;
+    background-color: #fff;
+    background-size: cover;
+  }
+  .services .service__item:nth-child(1) {
+    background-image: url("../img/service-1-mobile.png");
+    background-position: right;
+  }
+  .services .service__item:nth-child(2) {
+    background-image: url("../img/service-2-mobile.png");
+    background-position: right;
+  }
+  .services .service__item:nth-child(3) {
+    background-image: url("../img/service-3-mobile.png");
+    background-position: right;
+  }
+  .services .service__item:nth-child(4) {
+    background-image: url("../img/service-4-mobile.png");
+    background-position: right;
   }
   #menu-footer {
     -webkit-box-orient: vertical;

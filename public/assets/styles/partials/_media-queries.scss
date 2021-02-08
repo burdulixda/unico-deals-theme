@@ -170,6 +170,33 @@
 
   .services {
     justify-content : center !important;
+
+    .service__item {
+      width : 34.501rem;
+      height : 18.8rem;
+      background-color: #fff;
+      background-size: cover;
+
+      &:nth-child(1) {
+        background-image: url('../img/service-1-mobile.png');
+        background-position: right;
+      }
+
+      &:nth-child(2) {
+        background-image: url('../img/service-2-mobile.png');
+        background-position: right;
+      }
+
+      &:nth-child(3) {
+        background-image: url('../img/service-3-mobile.png');
+        background-position: right;
+      }
+
+      &:nth-child(4) {
+        background-image: url('../img/service-4-mobile.png');
+        background-position: right;
+      }
+    }
   }
 
   // FOOTER
