@@ -459,6 +459,45 @@ input[type=number] {
   border: 3px solid #ff0d56 !important;
 }
 
+@-webkit-keyframes itemsCountAnimation {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes itemsCountAnimation {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.animation-for__circle {
+  -webkit-animation-name: itemsCountAnimation;
+          animation-name: itemsCountAnimation;
+  -webkit-animation-duration: .8s;
+          animation-duration: .8s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
 @media (max-width: 768px) {
   section {
     margin-bottom: 5rem !important;
@@ -828,6 +867,8 @@ input[type=number] {
   border-radius: var(--radius-circle);
   background: #fff;
   border: 3px solid var(--unico-red);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

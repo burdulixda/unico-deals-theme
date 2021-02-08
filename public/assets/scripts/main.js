@@ -306,7 +306,7 @@ class Butaforia {
       }
       this.draw(el, currentCount);
       this.setStorage(currentCount--);
-    }, (~~(Math.random() * 20) + 15) * 1000);
+    }, (~~(Math.random() * 20) + 15) * 200);
 
   }
 
@@ -314,6 +314,12 @@ class Butaforia {
     if(el.length > 0) {
       for(let i = 0; i < el.length; i++) {
         el[i].innerText = value;
+        el[i].parentNode.classList.add("animation-for__circle");
+        const elAnimation = setTimeout(() => {
+          el[i].parentNode.classList.remove("animation-for__circle");
+          clearInterval(elAnimation);
+        }, 2000);
+
       }
     }
   }
