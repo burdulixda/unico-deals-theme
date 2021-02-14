@@ -36,7 +36,7 @@ if ( post_password_required() ) {
 ?>
 <!-- GALLERY MODAL -->
 <aside class="modal fade" id="imgModal" tabindex="-1" aria-labelledby="imgModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-body">
         <div class="d-flex justify-content-center align-items-center position-relative">

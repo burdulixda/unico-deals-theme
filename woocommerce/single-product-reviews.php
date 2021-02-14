@@ -62,7 +62,7 @@ if ( ! comments_open() ) {
 
 	<?php if ( get_option( 'woocommerce_review_rating_verification_required' ) === 'no' || wc_customer_bought_product( '', get_current_user_id(), $product->get_id() ) ) : ?>
 		<aside class="modal fade p-0" id="unicoAddComment">
-			<div class="unico__modalContainer modal-dialog h-100 modal-lg">
+			<div class="unico__modalContainer modal-dialog modal-dialog-centered h-100 modal-lg">
 				<div class="modal-content border-1">
 					<div class="modal-body unico-modal__radius p-sm-5">
 

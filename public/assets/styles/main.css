@@ -2115,7 +2115,6 @@ footer {
 
 .modal-content {
   border-radius: var(--radius-md);
-  margin-top: 10%;
 }
 
 .slider-modal {
@@ -2245,9 +2244,6 @@ footer {
   }
   #section-head {
     margin-bottom: 3rem;
-  }
-  #imgModal {
-    top: 25%;
   }
   .unico-info__title {
     font-size: var(--font-xl) !important;
